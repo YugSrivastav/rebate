@@ -38,7 +38,7 @@ export function EarningsList({ rewards, impressions, selectedCurrency }: Earning
         <div>
           <h2 className="text-lg font-bold text-white tracking-tight flex items-center gap-2">
             <span>Verified Earnings Ledger</span>
-            <span className="rounded-full bg-emerald-500/10 px-2 py-0.5 text-[11px] font-mono font-medium text-emerald-400 border border-emerald-500/20">
+            <span className="rounded-full bg-indigo-500/10 px-2 py-0.5 text-[11px] font-mono font-medium text-indigo-400 border border-indigo-500/20">
               70% Payout Share
             </span>
           </h2>
@@ -64,7 +64,7 @@ export function EarningsList({ rewards, impressions, selectedCurrency }: Earning
           <div className="mt-4 flex justify-center gap-3">
             <Link
               href="/demo"
-              className="inline-flex items-center gap-1 text-xs text-emerald-400 hover:underline"
+              className="inline-flex items-center gap-1 text-xs text-indigo-400 hover:underline"
             >
               <Sparkles className="h-3.5 w-3.5" /> Try 60s Demo Simulator
             </Link>
@@ -78,7 +78,7 @@ export function EarningsList({ rewards, impressions, selectedCurrency }: Earning
               className="flex items-center justify-between rounded-lg border border-zinc-800/60 bg-zinc-950/40 p-3.5 hover:border-zinc-700/80 transition"
             >
               <div className="flex items-center gap-3">
-                <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-400">
+                <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-indigo-500/10 border border-indigo-500/20 text-indigo-400">
                   <CheckCircle2 className="h-4 w-4" />
                 </div>
                 <div>
@@ -94,7 +94,7 @@ export function EarningsList({ rewards, impressions, selectedCurrency }: Earning
               </div>
 
               <div className="text-right">
-                <div className="text-sm font-bold font-mono text-emerald-400">
+                <div className="text-sm font-bold font-mono text-indigo-400">
                   +{formatCurrency(r.amount, r.currency)}
                 </div>
                 <div className="text-[10px] font-mono text-zinc-500 uppercase">
@@ -130,11 +130,11 @@ export function EarningsList({ rewards, impressions, selectedCurrency }: Earning
                     <td className="py-2.5 capitalize">{imp.agentType}</td>
                     <td className="py-2.5">{imp.durationSeconds}s</td>
                     <td className="py-2.5">
-                      <span className="inline-flex items-center rounded-full bg-emerald-500/10 px-2 py-0.5 text-[10px] text-emerald-400 border border-emerald-500/20">
+                      <span className="inline-flex items-center rounded-full bg-indigo-500/10 px-2 py-0.5 text-[10px] text-indigo-300 border border-indigo-500/20">
                         {imp.status}
                       </span>
                     </td>
-                    <td className="py-2.5 text-right font-bold text-emerald-400">
+                    <td className="py-2.5 text-right font-bold text-indigo-400">
                       +{formatCurrency(imp.developerReward, imp.currency)}
                     </td>
                   </tr>

@@ -23,7 +23,7 @@ export function OpportunityCard({
       <div>
         <div className="flex items-start justify-between gap-4 mb-3">
           <div className="flex items-center gap-2">
-            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-400">
+            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-indigo-500/10 border border-indigo-500/20 text-indigo-400">
               <Building className="h-4 w-4" />
             </div>
             <div>
@@ -36,7 +36,7 @@ export function OpportunityCard({
           </div>
 
           <div className="flex items-center gap-2">
-            <span className="rounded-full bg-zinc-800/80 px-2.5 py-0.5 text-[10px] font-mono uppercase tracking-wider text-emerald-400 border border-zinc-700/50">
+            <span className="rounded-full bg-zinc-800/80 px-2.5 py-0.5 text-[10px] font-mono uppercase tracking-wider text-indigo-400 border border-zinc-700/50">
               {opportunity.opportunityType.replace('_', ' ')}
             </span>
 
@@ -81,10 +81,10 @@ export function OpportunityCard({
 
         {/* Transparent Matching Rationale */}
         {opportunity.matchReason && (
-          <div className="rounded-lg bg-emerald-950/20 border border-emerald-500/20 p-2.5 text-[11px] text-zinc-300 mb-4 flex items-start gap-1.5">
-            <Sparkles className="h-3.5 w-3.5 text-emerald-400 shrink-0 mt-0.5" />
+          <div className="rounded-lg bg-indigo-950/20 border border-indigo-500/20 p-2.5 text-[11px] text-zinc-300 mb-4 flex items-start gap-1.5">
+            <Sparkles className="h-3.5 w-3.5 text-indigo-400 shrink-0 mt-0.5" />
             <div>
-              <span className="text-emerald-400 font-semibold font-mono">Matched for you: </span>
+              <span className="text-indigo-400 font-semibold font-mono">Matched for you: </span>
               <span>
                 {opportunity.matchReason.role || 'Developer'} • {opportunity.matchReason.field || 'Tech'} • {opportunity.matchReason.skills?.join(', ')}
               </span>

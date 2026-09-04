@@ -154,7 +154,7 @@ function SignUpContent() {
         {/* Brand Header */}
         <div className="text-center mb-6">
           <Link href="/" className="inline-flex items-center gap-2 font-mono font-bold text-white text-lg tracking-wider mb-2">
-            <div className="flex h-7 w-7 items-center justify-center rounded-md border border-emerald-500/30 bg-emerald-500/10 text-emerald-400">
+            <div className="flex h-7 w-7 items-center justify-center rounded-md border border-indigo-500/30 bg-indigo-500/10 text-indigo-400">
               <Terminal className="h-4 w-4" />
             </div>
             <span>REBATE</span>
@@ -175,7 +175,7 @@ function SignUpContent() {
               onClick={() => setRole('developer')}
               className={`flex items-center justify-center gap-2 rounded-lg py-2.5 text-xs font-medium transition border ${
                 role === 'developer'
-                  ? 'border-emerald-500 bg-emerald-500/10 text-emerald-300 font-semibold'
+                  ? 'border-indigo-500 bg-indigo-500/10 text-indigo-300 font-semibold'
                   : 'border-zinc-800 bg-zinc-950 text-zinc-400 hover:text-zinc-200'
               }`}
             >
@@ -187,7 +187,7 @@ function SignUpContent() {
               onClick={() => setRole('advertiser')}
               className={`flex items-center justify-center gap-2 rounded-lg py-2.5 text-xs font-medium transition border ${
                 role === 'advertiser'
-                  ? 'border-emerald-500 bg-emerald-500/10 text-emerald-300 font-semibold'
+                  ? 'border-indigo-500 bg-indigo-500/10 text-indigo-300 font-semibold'
                   : 'border-zinc-800 bg-zinc-950 text-zinc-400 hover:text-zinc-200'
               }`}
             >
@@ -206,7 +206,7 @@ function SignUpContent() {
             </div>
             <div className="h-1 w-full bg-zinc-800 rounded-full overflow-hidden">
               <div
-                className="h-full bg-emerald-500 transition-all duration-300"
+                className="h-full bg-indigo-500 transition-all duration-300"
                 style={{ width: `${(step / totalSteps) * 100}%` }}
               />
             </div>
@@ -233,7 +233,7 @@ function SignUpContent() {
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     placeholder="e.g. Priya Sharma"
-                    className="w-full rounded-lg border border-zinc-800 bg-zinc-950 px-3 py-2 text-xs text-white placeholder-zinc-600 focus:border-emerald-500 focus:outline-none"
+                    className="w-full rounded-lg border border-zinc-800 bg-zinc-950 px-3 py-2 text-xs text-white placeholder-zinc-600 focus:border-indigo-500 focus:outline-none"
                   />
                 </div>
                 <div>
@@ -244,7 +244,7 @@ function SignUpContent() {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="priya.sharma@tech.in"
-                    className="w-full rounded-lg border border-zinc-800 bg-zinc-950 px-3 py-2 text-xs text-white placeholder-zinc-600 focus:border-emerald-500 focus:outline-none font-mono"
+                    className="w-full rounded-lg border border-zinc-800 bg-zinc-950 px-3 py-2 text-xs text-white placeholder-zinc-600 focus:border-indigo-500 focus:outline-none font-mono"
                   />
                 </div>
                 <div>
@@ -254,7 +254,7 @@ function SignUpContent() {
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                     placeholder="••••••••••••"
-                    className="w-full rounded-lg border border-zinc-800 bg-zinc-950 px-3 py-2 text-xs text-white placeholder-zinc-600 focus:border-emerald-500 focus:outline-none font-mono"
+                    className="w-full rounded-lg border border-zinc-800 bg-zinc-950 px-3 py-2 text-xs text-white placeholder-zinc-600 focus:border-indigo-500 focus:outline-none font-mono"
                   />
                 </div>
               </div>
@@ -264,7 +264,7 @@ function SignUpContent() {
             {step === 2 && (
               <div className="space-y-5">
                 <div>
-                  <span className="text-[10px] font-mono text-emerald-400 uppercase tracking-wider">QUESTION 1 OF 4</span>
+                  <span className="text-[10px] font-mono text-indigo-400 uppercase tracking-wider">QUESTION 1 OF 4</span>
                   <h3 className="text-sm font-bold text-white mt-1">What is your professional role & primary field?</h3>
                   <p className="text-xs text-zinc-400 mt-0.5">Used exclusively to match you with appropriate job and grant tiers.</p>
                 </div>
@@ -279,7 +279,7 @@ function SignUpContent() {
                         onClick={() => setDevRole(r)}
                         className={`rounded-md p-2 text-xs text-left transition border ${
                           devRole === r
-                            ? 'border-emerald-500 bg-emerald-500/10 text-emerald-300 font-semibold'
+                            ? 'border-indigo-500 bg-indigo-500/10 text-indigo-300 font-semibold'
                             : 'border-zinc-800 bg-zinc-950 text-zinc-400 hover:border-zinc-700'
                         }`}
                       >
@@ -299,7 +299,7 @@ function SignUpContent() {
                         onClick={() => setDevField(f)}
                         className={`rounded-md p-2 text-xs text-left transition border ${
                           devField === f
-                            ? 'border-emerald-500 bg-emerald-500/10 text-emerald-300 font-semibold'
+                            ? 'border-indigo-500 bg-indigo-500/10 text-indigo-300 font-semibold'
                             : 'border-zinc-800 bg-zinc-950 text-zinc-400 hover:border-zinc-700'
                         }`}
                       >
@@ -315,7 +315,7 @@ function SignUpContent() {
             {step === 3 && (
               <div className="space-y-4">
                 <div>
-                  <span className="text-[10px] font-mono text-emerald-400 uppercase tracking-wider">QUESTION 2 OF 4</span>
+                  <span className="text-[10px] font-mono text-indigo-400 uppercase tracking-wider">QUESTION 2 OF 4</span>
                   <h3 className="text-sm font-bold text-white mt-1">Select your primary technical skills</h3>
                   <p className="text-xs text-zinc-400 mt-0.5">Advertisers specify skill tags to reach developers with matching proficiencies.</p>
                 </div>
@@ -330,11 +330,11 @@ function SignUpContent() {
                         onClick={() => toggleSkill(skill)}
                         className={`flex items-center gap-1.5 rounded-md px-2.5 py-1.5 text-xs font-mono transition border ${
                           active
-                            ? 'border-emerald-500 bg-emerald-500/15 text-emerald-300 font-semibold shadow-sm'
+                            ? 'border-indigo-500 bg-indigo-500/15 text-indigo-300 font-semibold shadow-sm'
                             : 'border-zinc-800 bg-zinc-950 text-zinc-400 hover:border-zinc-700'
                         }`}
                       >
-                        {active && <Check className="h-3 w-3 text-emerald-400" />}
+                        {active && <Check className="h-3 w-3 text-indigo-400" />}
                         <span>{skill}</span>
                       </button>
                     );
@@ -347,7 +347,7 @@ function SignUpContent() {
             {step === 4 && (
               <div className="space-y-5">
                 <div>
-                  <span className="text-[10px] font-mono text-emerald-400 uppercase tracking-wider">QUESTION 3 OF 4</span>
+                  <span className="text-[10px] font-mono text-indigo-400 uppercase tracking-wider">QUESTION 3 OF 4</span>
                   <h3 className="text-sm font-bold text-white mt-1">Education status & optional location</h3>
                   <p className="text-xs text-zinc-400 mt-0.5">Location is 100% voluntary. Leaving it blank limits opportunities to global/remote.</p>
                 </div>
@@ -362,7 +362,7 @@ function SignUpContent() {
                         onClick={() => setDevEducation(status)}
                         className={`rounded-md p-2 text-xs text-left transition border ${
                           devEducation === status
-                            ? 'border-emerald-500 bg-emerald-500/10 text-emerald-300 font-semibold'
+                            ? 'border-indigo-500 bg-indigo-500/10 text-indigo-300 font-semibold'
                             : 'border-zinc-800 bg-zinc-950 text-zinc-400 hover:border-zinc-700'
                         }`}
                       >
@@ -379,11 +379,11 @@ function SignUpContent() {
                         type="checkbox"
                         checked={hasLocation}
                         onChange={(e) => setHasLocation(e.target.checked)}
-                        className="rounded border-zinc-700 bg-zinc-900 text-emerald-500 focus:ring-emerald-500"
+                        className="rounded border-zinc-700 bg-zinc-900 text-indigo-500 focus:ring-indigo-500"
                       />
                       <span>Provide voluntary location</span>
                     </span>
-                    <span className="text-[10px] text-emerald-400 font-mono">Unlocks local bounties</span>
+                    <span className="text-[10px] text-indigo-400 font-mono">Unlocks local bounties</span>
                   </label>
 
                   {hasLocation && (
@@ -395,7 +395,7 @@ function SignUpContent() {
                           value={devCountry}
                           onChange={(e) => setDevCountry(e.target.value)}
                           placeholder="e.g. India"
-                          className="w-full rounded-md border border-zinc-800 bg-zinc-900 px-2.5 py-1.5 text-xs text-white placeholder-zinc-600 focus:border-emerald-500 focus:outline-none font-mono"
+                          className="w-full rounded-md border border-zinc-800 bg-zinc-900 px-2.5 py-1.5 text-xs text-white placeholder-zinc-600 focus:border-indigo-500 focus:outline-none font-mono"
                         />
                       </div>
                       <div>
@@ -405,7 +405,7 @@ function SignUpContent() {
                           value={devState}
                           onChange={(e) => setDevState(e.target.value)}
                           placeholder="e.g. Karnataka"
-                          className="w-full rounded-md border border-zinc-800 bg-zinc-900 px-2.5 py-1.5 text-xs text-white placeholder-zinc-600 focus:border-emerald-500 focus:outline-none font-mono"
+                          className="w-full rounded-md border border-zinc-800 bg-zinc-900 px-2.5 py-1.5 text-xs text-white placeholder-zinc-600 focus:border-indigo-500 focus:outline-none font-mono"
                         />
                       </div>
                     </div>
@@ -418,7 +418,7 @@ function SignUpContent() {
             {step === 5 && (
               <div className="space-y-4">
                 <div>
-                  <span className="text-[10px] font-mono text-emerald-400 uppercase tracking-wider">QUESTION 4 OF 4</span>
+                  <span className="text-[10px] font-mono text-indigo-400 uppercase tracking-wider">QUESTION 4 OF 4</span>
                   <h3 className="text-sm font-bold text-white mt-1">How would you like to receive your value share?</h3>
                   <p className="text-xs text-zinc-400 mt-0.5">Rebate provides 70% direct value share. You can change currencies anytime.</p>
                 </div>
@@ -433,7 +433,7 @@ function SignUpContent() {
                         onClick={() => setDevRewardPref(curr.id)}
                         className={`flex items-center justify-between p-3 rounded-lg border text-left transition ${
                           isSelected
-                            ? 'border-emerald-500 bg-emerald-500/10 text-white shadow-sm'
+                            ? 'border-indigo-500 bg-indigo-500/10 text-white shadow-sm'
                             : 'border-zinc-800 bg-zinc-950 text-zinc-400 hover:border-zinc-700'
                         }`}
                       >
@@ -447,7 +447,7 @@ function SignUpContent() {
                             {curr.id === 'API_CREDITS' && 'Developer API token credits across partnered tools.'}
                           </div>
                         </div>
-                        <span className="font-mono text-xs font-bold text-emerald-400 shrink-0 ml-3">
+                        <span className="font-mono text-xs font-bold text-indigo-400 shrink-0 ml-3">
                           {curr.symbol} {curr.id}
                         </span>
                       </button>
@@ -455,8 +455,8 @@ function SignUpContent() {
                   })}
                 </div>
 
-                <div className="rounded-lg border border-emerald-500/20 bg-emerald-950/10 p-3 flex items-start gap-2.5">
-                  <ShieldCheck className="h-4 w-4 text-emerald-400 shrink-0 mt-0.5" />
+                <div className="rounded-lg border border-indigo-500/20 bg-indigo-950/10 p-3 flex items-start gap-2.5">
+                  <ShieldCheck className="h-4 w-4 text-indigo-400 shrink-0 mt-0.5" />
                   <p className="text-[11px] text-zinc-400">
                     <strong className="text-zinc-200">Zero Code Reading Guarantee: </strong>
                     Rebate strictly matches using your voluntary profile answers. We never inspect local files, terminal histories, or model prompts.
@@ -490,7 +490,7 @@ function SignUpContent() {
                     setErrorMsg('');
                     setStep((prev) => prev + 1);
                   }}
-                  className="inline-flex items-center gap-1.5 rounded-lg bg-emerald-500 px-4 py-2 text-xs font-semibold text-black hover:bg-emerald-400 transition"
+                  className="inline-flex items-center gap-1.5 rounded-lg bg-white px-4 py-2 text-xs font-semibold text-zinc-950 hover:bg-zinc-200 transition"
                 >
                   <span>Continue</span>
                   <ArrowRight className="h-3.5 w-3.5" />
@@ -500,7 +500,7 @@ function SignUpContent() {
                   type="button"
                   disabled={isSubmitting}
                   onClick={handleDeveloperSubmit}
-                  className="inline-flex items-center gap-1.5 rounded-lg bg-emerald-500 px-5 py-2 text-xs font-semibold text-black hover:bg-emerald-400 transition shadow-sm"
+                  className="inline-flex items-center gap-1.5 rounded-lg bg-white px-5 py-2 text-xs font-semibold text-zinc-950 hover:bg-zinc-200 transition shadow-sm"
                 >
                   <span>{isSubmitting ? 'Creating Profile...' : 'Complete & Open Wallet'}</span>
                   <ArrowRight className="h-3.5 w-3.5" />
@@ -521,7 +521,7 @@ function SignUpContent() {
                 value={companyName}
                 onChange={(e) => setCompanyName(e.target.value)}
                 placeholder="e.g. Example AI Labs"
-                className="w-full rounded-lg border border-zinc-800 bg-zinc-950 px-3 py-2 text-xs text-white placeholder-zinc-600 focus:border-emerald-500 focus:outline-none"
+                className="w-full rounded-lg border border-zinc-800 bg-zinc-950 px-3 py-2 text-xs text-white placeholder-zinc-600 focus:border-indigo-500 focus:outline-none"
               />
             </div>
 
@@ -533,7 +533,7 @@ function SignUpContent() {
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 placeholder="e.g. Elena Rostova"
-                className="w-full rounded-lg border border-zinc-800 bg-zinc-950 px-3 py-2 text-xs text-white placeholder-zinc-600 focus:border-emerald-500 focus:outline-none"
+                className="w-full rounded-lg border border-zinc-800 bg-zinc-950 px-3 py-2 text-xs text-white placeholder-zinc-600 focus:border-indigo-500 focus:outline-none"
               />
             </div>
 
@@ -545,7 +545,7 @@ function SignUpContent() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="sponsor@example-ai.dev"
-                className="w-full rounded-lg border border-zinc-800 bg-zinc-950 px-3 py-2 text-xs text-white placeholder-zinc-600 focus:border-emerald-500 focus:outline-none font-mono"
+                className="w-full rounded-lg border border-zinc-800 bg-zinc-950 px-3 py-2 text-xs text-white placeholder-zinc-600 focus:border-indigo-500 focus:outline-none font-mono"
               />
             </div>
 
@@ -557,7 +557,7 @@ function SignUpContent() {
                 min="5000"
                 value={advertiserBudget}
                 onChange={(e) => setAdvertiserBudget(Number(e.target.value))}
-                className="w-full rounded-lg border border-zinc-800 bg-zinc-950 px-3 py-2 text-xs text-white focus:border-emerald-500 focus:outline-none font-mono"
+                className="w-full rounded-lg border border-zinc-800 bg-zinc-950 px-3 py-2 text-xs text-white focus:border-indigo-500 focus:outline-none font-mono"
               />
               <span className="text-[11px] text-zinc-500">Payments are simulated for hackathon evaluation.</span>
             </div>
@@ -565,7 +565,7 @@ function SignUpContent() {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="w-full mt-6 rounded-lg bg-emerald-500 py-2.5 text-xs font-semibold text-black hover:bg-emerald-400 transition shadow-sm"
+              className="w-full mt-6 rounded-lg bg-white py-2.5 text-xs font-semibold text-zinc-950 hover:bg-zinc-200 transition shadow-sm"
             >
               {isSubmitting ? 'Creating Advertiser Account...' : 'Create Advertiser Account'}
             </button>
@@ -574,7 +574,7 @@ function SignUpContent() {
 
         <div className="mt-6 text-center text-xs text-zinc-400">
           Already have an account?{' '}
-          <Link href="/login" className="text-emerald-400 hover:underline font-semibold">
+          <Link href="/login" className="text-indigo-400 hover:underline font-semibold">
             Sign in →
           </Link>
         </div>

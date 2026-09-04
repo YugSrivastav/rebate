@@ -6,7 +6,7 @@ export default function PrivacyPage() {
     <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6">
       {/* Header */}
       <div className="mb-12">
-        <div className="text-xs font-mono text-emerald-400 mb-2">PRIVACY & TRUST MANIFESTO</div>
+        <div className="text-xs font-mono text-indigo-400 mb-2">PRIVACY & TRUST MANIFESTO</div>
         <h1 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
           What Rebate reads & what Rebate never touches
         </h1>
@@ -47,7 +47,7 @@ export default function PrivacyPage() {
 
       {/* What Rebate Actually Uses */}
       <div className="rounded-xl border border-zinc-800 bg-zinc-950 p-6 sm:p-8 mb-10 shadow-lg">
-        <div className="flex items-center gap-2.5 mb-2 text-emerald-400 font-mono text-xs font-semibold uppercase tracking-wider">
+        <div className="flex items-center gap-2.5 mb-2 text-indigo-400 font-mono text-xs font-semibold uppercase tracking-wider">
           <CheckCircle2 className="h-4 w-4" />
           <span>What Rebate Uses (100% Voluntary Profile Criteria)</span>
         </div>
@@ -90,7 +90,7 @@ export default function PrivacyPage() {
           Rebate installs cleanly without modifying system binaries, patching tool executables, or wrapping shell commands. If you uninstall Rebate, your AI agent status lines return to normal instantly.
         </p>
         <div className="flex items-center gap-4 text-xs font-mono">
-          <Link href="/developer" className="text-emerald-400 hover:underline">
+          <Link href="/developer" className="text-indigo-400 hover:underline">
             Manage your Developer Profile →
           </Link>
           <Link href="/demo" className="text-zinc-400 hover:text-white">

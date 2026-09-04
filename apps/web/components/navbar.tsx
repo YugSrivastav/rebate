@@ -35,10 +35,10 @@ export function Navbar() {
             onClick={() => setMobileMenuOpen(false)}
             className="flex items-center gap-2.5 font-mono font-bold tracking-tight text-white transition hover:opacity-90"
           >
-            <div className="flex h-7 w-7 items-center justify-center rounded-md border border-emerald-500/30 bg-emerald-500/10 text-emerald-400">
-              <Terminal className="h-4 w-4" />
+            <div className="flex h-7 w-7 items-center justify-center rounded-md border border-zinc-800 bg-zinc-900 text-white">
+              <Terminal className="h-4 w-4 text-indigo-400" />
             </div>
-            <span className="text-base tracking-wider uppercase">Rebate</span>
+            <span className="text-base tracking-wider uppercase font-extrabold">Rebate</span>
           </Link>
 
           {/* Desktop Navigation Links based on Auth State */}
@@ -52,10 +52,10 @@ export function Navbar() {
                   How It Works
                 </Link>
                 <Link
-                  href="/#ecosystem"
+                  href="/#calculator"
                   className="rounded-md px-3 py-1.5 text-xs font-medium text-zinc-400 hover:text-zinc-200 transition"
                 >
-                  Ecosystem
+                  Calculator
                 </Link>
                 <Link
                   href="/privacy"
@@ -68,10 +68,10 @@ export function Navbar() {
                 <Link
                   href="/demo"
                   className={`flex items-center gap-1.5 rounded-md px-3 py-1.5 text-xs font-medium transition ${
-                    pathname === '/demo' ? 'bg-zinc-800 text-white' : 'text-emerald-400 hover:bg-emerald-500/10'
+                    pathname === '/demo' ? 'bg-zinc-800 text-white' : 'text-indigo-400 hover:bg-indigo-500/10'
                   }`}
                 >
-                  <Sparkles className="h-3.5 w-3.5 text-emerald-400" />
+                  <Sparkles className="h-3.5 w-3.5 text-indigo-400" />
                   <span>Demo Simulator</span>
                 </Link>
                 <Link
@@ -80,7 +80,7 @@ export function Navbar() {
                     pathname === '/download' ? 'bg-zinc-800 text-white' : 'text-zinc-400 hover:text-zinc-200'
                   }`}
                 >
-                  <Download className="h-3.5 w-3.5 text-emerald-400" />
+                  <Download className="h-3.5 w-3.5 text-zinc-400" />
                   <span>Download</span>
                 </Link>
               </>
@@ -117,7 +117,7 @@ export function Navbar() {
                 </Link>
                 <Link
                   href="/demo"
-                  className={`flex items-center gap-1.5 rounded-md px-3 py-1.5 text-xs font-medium text-emerald-400 hover:bg-emerald-500/10 transition`}
+                  className={`flex items-center gap-1.5 rounded-md px-3 py-1.5 text-xs font-medium text-indigo-400 hover:bg-indigo-500/10 transition`}
                 >
                   <Sparkles className="h-3.5 w-3.5" />
                   <span>60s Simulator</span>
@@ -147,7 +147,7 @@ export function Navbar() {
                 </Link>
                 <Link
                   href="/demo"
-                  className={`flex items-center gap-1.5 rounded-md px-3 py-1.5 text-xs font-medium text-emerald-400 hover:bg-emerald-500/10 transition`}
+                  className={`flex items-center gap-1.5 rounded-md px-3 py-1.5 text-xs font-medium text-indigo-400 hover:bg-indigo-500/10 transition`}
                 >
                   <Sparkles className="h-3.5 w-3.5" />
                   <span>Auction Simulator</span>
@@ -169,7 +169,7 @@ export function Navbar() {
               </Link>
               <Link
                 href="/signup?role=developer"
-                className="inline-flex items-center gap-1.5 rounded-lg bg-emerald-500 px-3.5 py-1.5 text-xs font-semibold text-black hover:bg-emerald-400 transition shadow-sm"
+                className="inline-flex items-center gap-1.5 rounded-lg bg-white px-3.5 py-1.5 text-xs font-semibold text-zinc-950 hover:bg-zinc-200 transition shadow-sm"
               >
                 <span>Get Started</span>
                 <ArrowUpRight className="h-3.5 w-3.5" />
@@ -178,12 +178,12 @@ export function Navbar() {
           ) : (
             <div className="flex items-center gap-3">
               <div className="hidden sm:flex items-center gap-2 rounded-lg border border-zinc-800 bg-zinc-900/60 px-2.5 py-1 text-xs">
-                <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
+                <span className="h-1.5 w-1.5 rounded-full bg-indigo-400" />
                 <span className="font-medium text-zinc-300">
                   {user?.name || (role === 'advertiser' ? 'Advertiser' : 'Developer')}
                 </span>
                 {role === 'developer' ? (
-                  <span className="rounded bg-zinc-800 px-1.5 py-0.5 text-[10px] font-mono text-emerald-400">
+                  <span className="rounded bg-zinc-800 px-1.5 py-0.5 text-[10px] font-mono text-indigo-300">
                     70% Payout Active
                   </span>
                 ) : (
@@ -246,7 +246,7 @@ export function Navbar() {
               <Link
                 href="/demo"
                 onClick={() => setMobileMenuOpen(false)}
-                className="block rounded-md px-3 py-2 text-xs font-medium text-emerald-400 hover:bg-zinc-900"
+                className="block rounded-md px-3 py-2 text-xs font-medium text-indigo-400 hover:bg-zinc-900"
               >
                 60s Demo Simulator
               </Link>
@@ -255,7 +255,7 @@ export function Navbar() {
                 onClick={() => setMobileMenuOpen(false)}
                 className="flex items-center gap-2 rounded-md px-3 py-2 text-xs font-medium text-zinc-300 hover:bg-zinc-900"
               >
-                <Download className="h-3.5 w-3.5 text-emerald-400" />
+                <Download className="h-3.5 w-3.5 text-indigo-400" />
                 <span>Download CLI & SDK</span>
               </Link>
               <div className="pt-2 border-t border-zinc-800/80 flex gap-2">
@@ -269,7 +269,7 @@ export function Navbar() {
                 <Link
                   href="/signup?role=developer"
                   onClick={() => setMobileMenuOpen(false)}
-                  className="flex-1 text-center rounded-lg bg-emerald-500 py-2 text-xs font-semibold text-black"
+                  className="flex-1 text-center rounded-lg bg-white py-2 text-xs font-semibold text-zinc-950 hover:bg-zinc-200"
                 >
                   Get Started
                 </Link>
@@ -322,7 +322,7 @@ export function Navbar() {
               <Link
                 href="/demo"
                 onClick={() => setMobileMenuOpen(false)}
-                className="block rounded-md px-3 py-2 text-xs font-medium text-emerald-400 hover:bg-zinc-900"
+                className="block rounded-md px-3 py-2 text-xs font-medium text-indigo-400 hover:bg-zinc-900"
               >
                 Launch 60s Demo Simulator
               </Link>

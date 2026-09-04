@@ -26,7 +26,7 @@ export function CampaignStats({
       <div className="rounded-xl border border-zinc-800/80 bg-zinc-900/40 p-5">
         <div className="flex items-center justify-between text-xs text-zinc-400">
           <span>Verified Impressions</span>
-          <CheckCircle2 className="h-4 w-4 text-emerald-400" />
+          <CheckCircle2 className="h-4 w-4 text-indigo-400" />
         </div>
         <div className="mt-3 text-2xl font-bold text-white font-mono">
           {totalVerified}
@@ -45,7 +45,7 @@ export function CampaignStats({
         <div className="mt-3 text-2xl font-bold text-white font-mono">
           {totalClicks}
         </div>
-        <div className="mt-2 text-[11px] text-emerald-400 font-mono">
+        <div className="mt-2 text-[11px] text-indigo-400 font-mono">
           {overallCtr}% average CTR
         </div>
       </div>
@@ -54,7 +54,7 @@ export function CampaignStats({
       <div className="rounded-xl border border-zinc-800/80 bg-zinc-900/40 p-5">
         <div className="flex items-center justify-between text-xs text-zinc-400">
           <span>Total Campaign Spend</span>
-          <DollarSign className="h-4 w-4 text-emerald-400" />
+          <DollarSign className="h-4 w-4 text-indigo-400" />
         </div>
         <div className="mt-3 text-2xl font-bold text-white font-mono">
           ₹{totalSpend.toFixed(2)}
@@ -74,7 +74,7 @@ export function CampaignStats({
           {activeCount}
         </div>
         <div className="mt-2 text-[11px] text-zinc-500 flex items-center gap-1">
-          <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
+          <span className="h-1.5 w-1.5 rounded-full bg-indigo-400 animate-pulse" />
           Auction matching online
         </div>
       </div>

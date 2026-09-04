@@ -212,25 +212,25 @@ export default function DemoSimulatorPage() {
   return (
     <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6">
       {/* Top Banner: Evaluator Guide Alert */}
-      <div className="mb-8 rounded-xl border border-emerald-500/30 bg-emerald-950/20 p-4 sm:p-5 flex flex-col md:flex-row md:items-center justify-between gap-4">
+      <div className="mb-8 rounded-xl border border-zinc-800 bg-zinc-950/80 p-4 sm:p-5 flex flex-col md:flex-row md:items-center justify-between gap-4 shadow-lg">
         <div className="flex items-start gap-3">
-          <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
+          <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">
             <Sparkles className="h-4 w-4" />
           </div>
           <div>
             <div className="flex items-center gap-2">
-              <span className="text-xs font-mono font-bold text-emerald-400 uppercase tracking-wider">
+              <span className="text-xs font-mono font-bold text-indigo-400 uppercase tracking-wider">
                 Hackathon Judge Evaluator Mode
               </span>
-              <span className="rounded-full bg-emerald-500/20 px-2 py-0.5 text-[10px] font-mono text-emerald-300">
+              <span className="rounded-full bg-zinc-900 border border-zinc-800 px-2 py-0.5 text-[10px] font-mono text-zinc-300">
                 Self-Serve
               </span>
             </div>
-            <p className="mt-0.5 text-xs text-zinc-300">
+            <p className="mt-0.5 text-xs text-zinc-400">
               Test the entire Rebate value engine right in your browser. Toggle between <strong>Auto-Play</strong> or <strong>Step-by-Step</strong> to inspect auction math, terminal mechanics, and wallet settlement.
             </p>
-            <div className="mt-2 inline-flex items-center gap-2 rounded-md bg-emerald-500/10 border border-emerald-500/25 px-2 py-0.5 text-[10px] font-mono text-emerald-300">
-              <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
+            <div className="mt-2 inline-flex items-center gap-2 rounded-md bg-indigo-500/10 border border-indigo-500/20 px-2.5 py-0.5 text-[10px] font-mono text-indigo-300">
+              <span className="h-1.5 w-1.5 rounded-full bg-indigo-400" />
               <span>Hackathon Prototype Note: End-to-end working implementation is built specifically for Google Antigravity CLI (`agy`).</span>
             </div>
           </div>
@@ -248,7 +248,7 @@ export default function DemoSimulatorPage() {
           <button
             onClick={startAutoPlay}
             disabled={simulating}
-            className="flex items-center gap-1.5 rounded-lg bg-emerald-500 px-3.5 py-1.5 text-xs font-semibold text-black hover:bg-emerald-400 transition shadow-sm disabled:opacity-50"
+            className="flex items-center gap-1.5 rounded-lg bg-white px-4 py-1.5 text-xs font-semibold text-zinc-950 hover:bg-zinc-200 transition shadow-[0_0_15px_rgba(255,255,255,0.1)] disabled:opacity-50"
           >
             <Play className="h-3.5 w-3.5 fill-current" />
             <span>Auto-Play Loop (60s)</span>
@@ -296,7 +296,7 @@ export default function DemoSimulatorPage() {
                 }}
                 className={`text-left rounded-lg p-2.5 border transition font-mono ${
                   isCurrent
-                    ? 'border-emerald-500 bg-emerald-500/10 text-emerald-300 ring-1 ring-emerald-500/50 shadow-sm'
+                    ? 'border-indigo-500 bg-indigo-500/10 text-indigo-200 ring-1 ring-indigo-500/40 shadow-sm'
                     : isCompleted
                     ? 'border-zinc-700/80 bg-zinc-900/60 text-zinc-300'
                     : 'border-zinc-800/80 bg-zinc-950/40 text-zinc-600 hover:border-zinc-700'
@@ -304,7 +304,7 @@ export default function DemoSimulatorPage() {
               >
                 <div className="flex items-center justify-between text-[11px] mb-1">
                   <span className="font-bold">Step {s.num}</span>
-                  {isCompleted && <CheckCircle2 className="h-3 w-3 text-emerald-400" />}
+                  {isCompleted && <CheckCircle2 className="h-3 w-3 text-indigo-400" />}
                 </div>
                 <div className="text-[10px] truncate leading-tight">{s.title}</div>
               </button>
@@ -329,7 +329,7 @@ export default function DemoSimulatorPage() {
                   Google Antigravity CLI (`agy`) — Native Session
                 </span>
               </div>
-              <span className="text-[11px] font-mono text-emerald-400">
+              <span className="text-[11px] font-mono text-indigo-400">
                 {step >= 4 && step < 6
                   ? '● Opportunity Active'
                   : step === 2 || step === 3
@@ -343,7 +343,7 @@ export default function DemoSimulatorPage() {
             {/* Terminal Body */}
             <div className="space-y-2.5 min-h-[220px]">
               <div className="text-zinc-500">
-                <span className="text-emerald-400">priya@dev-box</span>:<span className="text-cyan-400">~/ml-pipeline</span>$ agy refactor auth_middleware.py --verify-tokens
+                <span className="text-indigo-400">priya@dev-box</span>:<span className="text-cyan-400">~/ml-pipeline</span>$ agy refactor auth_middleware.py --verify-tokens
               </div>
 
               {step >= 1 && (
@@ -373,7 +373,7 @@ export default function DemoSimulatorPage() {
 
               {/* STEP 4: Live 1-Line Opportunity Banner */}
               {step >= 4 && step < 6 && (
-                <div className="my-2 rounded-lg border border-emerald-500/40 bg-emerald-950/20 p-3 text-zinc-100 transition shadow-lg shadow-emerald-950/50">
+                <div className="my-2 rounded-lg border border-indigo-500/40 bg-indigo-950/20 p-3 text-zinc-100 transition shadow-lg shadow-indigo-950/30">
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                     <div className="flex items-center gap-2 truncate">
                       <span className="text-cyan-400 animate-spin">⠋</span>
@@ -388,7 +388,7 @@ export default function DemoSimulatorPage() {
                         href={winner?.destinationUrl || 'https://example-ai.dev/careers/internship-2026'}
                         target="_blank"
                         rel="noreferrer"
-                        className="text-emerald-400 hover:text-emerald-300 underline font-semibold flex items-center gap-1"
+                        className="text-indigo-400 hover:text-indigo-300 underline font-semibold flex items-center gap-1"
                         onClick={() => setHotkeyTriggered(true)}
                       >
                         <span>{winner?.cta || 'Apply'} ↗</span>
@@ -401,7 +401,7 @@ export default function DemoSimulatorPage() {
                       </span>
                       <button
                         onClick={handleSettle}
-                        className="rounded bg-emerald-500 px-2 py-1 text-[11px] font-bold text-black hover:bg-emerald-400 transition"
+                        className="rounded bg-white px-2.5 py-1 text-[11px] font-bold text-zinc-950 hover:bg-zinc-200 transition shadow-sm"
                       >
                         Instant Settle
                       </button>
@@ -409,16 +409,16 @@ export default function DemoSimulatorPage() {
                   </div>
 
                   {/* Terminal Interaction Hint */}
-                  <div className="mt-2.5 pt-2 border-t border-emerald-500/20 flex flex-wrap items-center justify-between text-[11px] text-zinc-400">
+                  <div className="mt-2.5 pt-2 border-t border-indigo-500/20 flex flex-wrap items-center justify-between text-[11px] text-zinc-400">
                     <div className="flex items-center gap-2">
-                      <Keyboard className="h-3.5 w-3.5 text-emerald-400" />
+                      <Keyboard className="h-3.5 w-3.5 text-indigo-400" />
                       <span>
                         Press <kbd className="px-1.5 py-0.5 rounded bg-zinc-800 border border-zinc-700 text-white font-bold">o</kbd> on your keyboard or click below to simulate hotkey:
                       </span>
                     </div>
                     <button
                       onClick={triggerHotkeyO}
-                      className="inline-flex items-center gap-1 text-emerald-400 hover:text-emerald-300 font-semibold"
+                      className="inline-flex items-center gap-1 text-indigo-400 hover:text-indigo-300 font-semibold"
                     >
                       <span>Simulate 'o' Press</span>
                       <ExternalLink className="h-3 w-3" />
@@ -428,14 +428,14 @@ export default function DemoSimulatorPage() {
               )}
 
               {hotkeyTriggered && (
-                <div className="text-[11px] text-emerald-400 bg-emerald-950/40 border border-emerald-500/30 p-2 rounded">
+                <div className="text-[11px] text-indigo-300 bg-indigo-950/40 border border-indigo-500/30 p-2 rounded">
                   ✔ Hotkey 'o' / Click registered. Opened sponsored destination in browser. Dwell integrity recorded.
                 </div>
               )}
 
               {step === 6 && (
                 <div className="space-y-2 pt-2 text-xs">
-                  <div className="text-emerald-400 font-semibold">
+                  <div className="text-indigo-400 font-semibold">
                     ✔ Agent completed refactor in 8.4s. Cleanly reverted line to prompt.
                   </div>
                   <div className="text-zinc-500">
@@ -453,7 +453,7 @@ export default function DemoSimulatorPage() {
           <div className="rounded-xl border border-zinc-800 bg-zinc-900/40 p-5">
             <div className="flex items-center justify-between mb-3">
               <h3 className="text-xs font-mono font-bold text-white uppercase tracking-wider flex items-center gap-2">
-                <Info className="h-4 w-4 text-emerald-400" />
+                <Info className="h-4 w-4 text-indigo-400" />
                 <span>Architecture Breakdown: Step {step} — {stepsMeta[step - 1].title}</span>
               </h3>
               <span className="text-[11px] font-mono text-zinc-500">Section 22 Verification</span>
@@ -462,7 +462,7 @@ export default function DemoSimulatorPage() {
             {step === 1 && (
               <div className="space-y-3 text-xs text-zinc-300 leading-relaxed">
                 <p>
-                  Rebate matches opportunities using <strong>only voluntary profile attributes</strong> explicitly declared by the developer in <code className="text-emerald-300 bg-zinc-950 px-1 py-0.5 rounded">~/.rebate/config.json</code> or the Developer Center.
+                  Rebate matches opportunities using <strong>only voluntary profile attributes</strong> explicitly declared by the developer in <code className="text-indigo-300 bg-zinc-950 px-1 py-0.5 rounded">~/.rebate/config.json</code> or the Developer Center.
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
                   <div className="rounded-lg border border-zinc-800 bg-zinc-950/60 p-3">
@@ -480,7 +480,7 @@ export default function DemoSimulatorPage() {
             {step === 2 && (
               <div className="space-y-3 text-xs text-zinc-300 leading-relaxed">
                 <p>
-                  In the terminal, Rebate wraps the process via transparent PTY wrapper (<code className="text-emerald-300 bg-zinc-950 px-1 py-0.5 rounded">apps/cli/src/proxy/agy_proxy.py</code>). It listens for transient status phrases:
+                  In the terminal, Rebate wraps the process via transparent PTY wrapper (<code className="text-indigo-300 bg-zinc-950 px-1 py-0.5 rounded">apps/cli/src/proxy/agy_proxy.py</code>). It listens for transient status phrases:
                 </p>
                 <div className="flex flex-wrap gap-2 font-mono text-[11px]">
                   <span className="px-2 py-0.5 rounded bg-zinc-800 border border-zinc-700 text-zinc-300">Working...</span>
@@ -500,7 +500,7 @@ export default function DemoSimulatorPage() {
                 <p>
                   When a wait state is detected, the proxy requests a candidate from the local/edge auction engine. The auction ranks campaigns by:
                 </p>
-                <div className="rounded-lg border border-zinc-800 bg-zinc-950 p-3 font-mono text-xs text-emerald-300 text-center">
+                <div className="rounded-lg border border-zinc-800 bg-zinc-950 p-3 font-mono text-xs text-indigo-300 text-center">
                   Auction Rank = Advertiser Bid (CPM) × Relevance Score (0.0–1.0) × Quality Score (0.5–2.0)
                 </div>
                 <p className="text-zinc-400">
@@ -516,7 +516,7 @@ export default function DemoSimulatorPage() {
                 </p>
                 <ul className="list-disc list-inside space-y-1 text-zinc-400">
                   <li>
-                    <strong className="text-white">Mouse Click (OSC 8 Hyperlinks):</strong> Modern terminals (Windows Terminal, VS Code, iTerm) support ANSI OSC 8 links (<code className="text-emerald-300 bg-zinc-950 px-1 py-0.5 rounded">\x1b]8;;url\x1b\</code>). Click directly on the title or CTA.
+                    <strong className="text-white">Mouse Click (OSC 8 Hyperlinks):</strong> Modern terminals (Windows Terminal, VS Code, iTerm) support ANSI OSC 8 links (<code className="text-indigo-300 bg-zinc-950 px-1 py-0.5 rounded">\x1b]8;;url\x1b\</code>). Click directly on the title or CTA.
                   </li>
                   <li>
                     <strong className="text-white">Keyboard Hotkey ('o'):</strong> Press <kbd className="px-1 py-0.5 rounded bg-zinc-800 border border-zinc-700 text-white font-bold">o</kbd> while the opportunity is visible to launch the link in your default browser.
@@ -531,27 +531,27 @@ export default function DemoSimulatorPage() {
                   Before crediting any balance, Rebate runs a <strong>7-Layer Anti-Fraud & Privacy Verification Gate</strong>:
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-[11px] font-mono">
-                  <div className="flex items-center gap-1.5 text-emerald-400">
+                  <div className="flex items-center gap-1.5 text-indigo-400">
                     <CheckCircle2 className="h-3.5 w-3.5" />
                     <span>Zero Code/Prompt Ingestion</span>
                   </div>
-                  <div className="flex items-center gap-1.5 text-emerald-400">
+                  <div className="flex items-center gap-1.5 text-indigo-400">
                     <CheckCircle2 className="h-3.5 w-3.5" />
                     <span>Dwell Time Verification (≥ 5s)</span>
                   </div>
-                  <div className="flex items-center gap-1.5 text-emerald-400">
+                  <div className="flex items-center gap-1.5 text-indigo-400">
                     <CheckCircle2 className="h-3.5 w-3.5" />
                     <span>Genuine Agent Process Signature</span>
                   </div>
-                  <div className="flex items-center gap-1.5 text-emerald-400">
+                  <div className="flex items-center gap-1.5 text-indigo-400">
                     <CheckCircle2 className="h-3.5 w-3.5" />
                     <span>Rate Limiter (1 opp / 180s)</span>
                   </div>
-                  <div className="flex items-center gap-1.5 text-emerald-400">
+                  <div className="flex items-center gap-1.5 text-indigo-400">
                     <CheckCircle2 className="h-3.5 w-3.5" />
                     <span>Window Focus Attestation</span>
                   </div>
-                  <div className="flex items-center gap-1.5 text-emerald-400">
+                  <div className="flex items-center gap-1.5 text-indigo-400">
                     <CheckCircle2 className="h-3.5 w-3.5" />
                     <span>Anti-Sybil Replay Nonce</span>
                   </div>
@@ -569,9 +569,9 @@ export default function DemoSimulatorPage() {
                     <div className="text-[10px] text-zinc-500">ADVERTISER SPEND</div>
                     <div className="text-sm font-bold text-white mt-1">₹7.00</div>
                   </div>
-                  <div className="p-2.5 rounded-lg border border-emerald-500/40 bg-emerald-950/20">
-                    <div className="text-[10px] text-emerald-400 font-bold">DEVELOPER (70%)</div>
-                    <div className="text-sm font-bold text-emerald-400 mt-1">+₹4.90</div>
+                  <div className="p-2.5 rounded-lg border border-indigo-500/40 bg-indigo-950/20">
+                    <div className="text-[10px] text-indigo-400 font-bold">DEVELOPER (70%)</div>
+                    <div className="text-sm font-bold text-indigo-300 mt-1">+₹4.90</div>
                   </div>
                   <div className="p-2.5 rounded-lg border border-zinc-800 bg-zinc-950">
                     <div className="text-[10px] text-zinc-500">PLATFORM (30%)</div>
@@ -581,7 +581,7 @@ export default function DemoSimulatorPage() {
                 <div className="pt-2 flex justify-end">
                   <Link
                     href="/developer"
-                    className="inline-flex items-center gap-1.5 rounded-lg bg-emerald-500 px-3.5 py-1.5 text-xs font-semibold text-black hover:bg-emerald-400 transition"
+                    className="inline-flex items-center gap-1.5 rounded-lg bg-white px-3.5 py-1.5 text-xs font-semibold text-zinc-950 hover:bg-zinc-200 transition shadow-sm"
                   >
                     <span>View Priya's Updated Wallet</span>
                     <ArrowRight className="h-3.5 w-3.5" />
@@ -600,7 +600,7 @@ export default function DemoSimulatorPage() {
               <span className="text-xs font-mono font-bold text-white uppercase tracking-wider">
                 Active Developer Context
               </span>
-              <span className="text-[10px] font-mono text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20">
+              <span className="text-[10px] font-mono text-indigo-400 bg-indigo-500/10 px-2 py-0.5 rounded border border-indigo-500/20">
                 Priya Sharma
               </span>
             </div>
@@ -620,7 +620,7 @@ export default function DemoSimulatorPage() {
               </div>
               <div className="flex items-center justify-between py-1 border-b border-zinc-800/60">
                 <span className="text-zinc-500">Reward Mode:</span>
-                <span className="text-emerald-400 font-bold">INR Cash (UPI)</span>
+                <span className="text-indigo-400 font-bold">INR Cash (UPI)</span>
               </div>
               <div className="flex items-center justify-between py-1">
                 <span className="text-zinc-500">Native CLI:</span>
@@ -645,7 +645,7 @@ export default function DemoSimulatorPage() {
                     key={cand.campaignId}
                     className={`p-3 rounded-lg border text-xs font-mono ${
                       cand.qualified
-                        ? 'border-emerald-500/40 bg-emerald-950/20'
+                        ? 'border-indigo-500/30 bg-indigo-950/20'
                         : 'border-zinc-800 bg-zinc-950/60 text-zinc-500'
                     }`}
                   >
@@ -654,7 +654,7 @@ export default function DemoSimulatorPage() {
                         {cand.title}
                       </span>
                       {cand.qualified ? (
-                        <span className="text-[10px] font-bold text-emerald-400 flex items-center gap-1">
+                        <span className="text-[10px] font-bold text-indigo-400 flex items-center gap-1">
                           <CheckCircle2 className="h-3 w-3" />
                           <span>QUALIFIED</span>
                         </span>
@@ -690,7 +690,7 @@ export default function DemoSimulatorPage() {
               <span className="text-xs font-mono font-bold text-white uppercase tracking-wider">
                 Live Auction Score Matrix
               </span>
-              <span className="text-[10px] font-mono text-emerald-400">Rank = Bid × Rel × Qual</span>
+              <span className="text-[10px] font-mono text-indigo-400">Rank = Bid × Rel × Qual</span>
             </div>
 
             <div className="space-y-2 font-mono text-xs">
@@ -700,7 +700,7 @@ export default function DemoSimulatorPage() {
                     key={score.campaignId}
                     className={`p-2.5 rounded-lg border flex items-center justify-between ${
                       i === 0
-                        ? 'border-emerald-500/40 bg-emerald-950/30 text-emerald-300 font-bold'
+                        ? 'border-indigo-500/40 bg-indigo-950/30 text-indigo-200 font-bold'
                         : 'border-zinc-800 bg-zinc-950/40 text-zinc-400'
                     }`}
                   >
@@ -711,7 +711,7 @@ export default function DemoSimulatorPage() {
                       </div>
                     </div>
                     <div className="text-right">
-                      <div className="text-emerald-400 text-sm">{score.totalScore.toFixed(2)}</div>
+                      <div className="text-indigo-400 text-sm">{score.totalScore.toFixed(2)}</div>
                       <div className="text-[10px] text-zinc-500">{i === 0 ? '🏆 WINNER' : 'RUNNER-UP'}</div>
                     </div>
                   </div>
@@ -736,13 +736,13 @@ export default function DemoSimulatorPage() {
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
           <Link
             href="/developer"
-            className="group rounded-lg border border-zinc-800 bg-zinc-900/50 p-4 hover:border-emerald-500/40 transition"
+            className="group rounded-lg border border-zinc-800 bg-zinc-900/50 p-4 hover:border-zinc-700 hover:bg-zinc-900/80 transition"
           >
             <div className="flex items-center justify-between mb-2">
-              <span className="text-xs font-mono font-bold text-white group-hover:text-emerald-400 transition">
+              <span className="text-xs font-mono font-bold text-white group-hover:text-indigo-400 transition">
                 1. Developer Wallet
               </span>
-              <ArrowRight className="h-3.5 w-3.5 text-zinc-500 group-hover:text-emerald-400 group-hover:translate-x-0.5 transition" />
+              <ArrowRight className="h-3.5 w-3.5 text-zinc-500 group-hover:text-indigo-400 group-hover:translate-x-0.5 transition" />
             </div>
             <p className="text-[11px] text-zinc-400">
               Inspect Priya's live ledger balance, voluntary profile tags, and multi-currency payout options (INR / USD / GPU).
@@ -751,13 +751,13 @@ export default function DemoSimulatorPage() {
 
           <Link
             href="/advertiser"
-            className="group rounded-lg border border-zinc-800 bg-zinc-900/50 p-4 hover:border-emerald-500/40 transition"
+            className="group rounded-lg border border-zinc-800 bg-zinc-900/50 p-4 hover:border-zinc-700 hover:bg-zinc-900/80 transition"
           >
             <div className="flex items-center justify-between mb-2">
-              <span className="text-xs font-mono font-bold text-white group-hover:text-emerald-400 transition">
+              <span className="text-xs font-mono font-bold text-white group-hover:text-indigo-400 transition">
                 2. Advertiser Portal
               </span>
-              <ArrowRight className="h-3.5 w-3.5 text-zinc-500 group-hover:text-emerald-400 group-hover:translate-x-0.5 transition" />
+              <ArrowRight className="h-3.5 w-3.5 text-zinc-500 group-hover:text-indigo-400 group-hover:translate-x-0.5 transition" />
             </div>
             <p className="text-[11px] text-zinc-400">
               Create developer campaigns, set targeting filters (roles/countries/skills), top up demo budget, and inspect CTR telemetry.
@@ -766,13 +766,13 @@ export default function DemoSimulatorPage() {
 
           <Link
             href="/download"
-            className="group rounded-lg border border-zinc-800 bg-zinc-900/50 p-4 hover:border-emerald-500/40 transition"
+            className="group rounded-lg border border-zinc-800 bg-zinc-900/50 p-4 hover:border-zinc-700 hover:bg-zinc-900/80 transition"
           >
             <div className="flex items-center justify-between mb-2">
-              <span className="text-xs font-mono font-bold text-white group-hover:text-emerald-400 transition">
+              <span className="text-xs font-mono font-bold text-white group-hover:text-indigo-400 transition">
                 3. CLI / SDK Specs
               </span>
-              <ArrowRight className="h-3.5 w-3.5 text-zinc-500 group-hover:text-emerald-400 group-hover:translate-x-0.5 transition" />
+              <ArrowRight className="h-3.5 w-3.5 text-zinc-500 group-hover:text-indigo-400 group-hover:translate-x-0.5 transition" />
             </div>
             <p className="text-[11px] text-zinc-400">
               Review Google Antigravity CLI native integration details, proxy architecture, MCP integration, and installation commands.

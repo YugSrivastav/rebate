@@ -26,7 +26,7 @@ export function CampaignCard({ campaign, onToggleStatus, isToggling }: CampaignC
             <span
               className={`rounded-full px-2 py-0.5 text-[10px] font-mono font-medium border ${
                 isActive
-                  ? 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20'
+                  ? 'bg-indigo-500/10 text-indigo-400 border-indigo-500/20'
                   : 'bg-zinc-800 text-zinc-400 border-zinc-700'
               }`}
             >
@@ -56,7 +56,7 @@ export function CampaignCard({ campaign, onToggleStatus, isToggling }: CampaignC
             className={`inline-flex items-center gap-1.5 rounded-md px-3 py-1.5 text-xs font-medium transition ${
               isActive
                 ? 'border border-amber-500/30 bg-amber-500/10 text-amber-300 hover:bg-amber-500/20'
-                : 'border border-emerald-500/30 bg-emerald-500/10 text-emerald-300 hover:bg-emerald-500/20'
+                : 'border border-indigo-500/30 bg-indigo-500/10 text-indigo-300 hover:bg-indigo-500/20'
             }`}
           >
             {isActive ? (
@@ -90,7 +90,7 @@ export function CampaignCard({ campaign, onToggleStatus, isToggling }: CampaignC
 
         <div className="rounded-lg bg-zinc-950/40 p-2.5 border border-zinc-800/40">
           <div className="text-[11px] text-zinc-500">Verified Impressions</div>
-          <div className="mt-1 font-bold text-emerald-400">
+          <div className="mt-1 font-bold text-indigo-400">
             {campaign.verifiedImpressionsCount} <span className="text-zinc-600">({campaign.impressionsCount} reqs)</span>
           </div>
         </div>
@@ -98,7 +98,7 @@ export function CampaignCard({ campaign, onToggleStatus, isToggling }: CampaignC
         <div className="rounded-lg bg-zinc-950/40 p-2.5 border border-zinc-800/40">
           <div className="text-[11px] text-zinc-500">Clicks / CTR</div>
           <div className="mt-1 font-bold text-white">
-            {campaign.clicksCount} <span className="text-emerald-400 text-[10px]">({ctr}%)</span>
+            {campaign.clicksCount} <span className="text-indigo-400 text-[10px]">({ctr}%)</span>
           </div>
         </div>
       </div>
@@ -118,7 +118,7 @@ export function CampaignCard({ campaign, onToggleStatus, isToggling }: CampaignC
         ))}
         {(campaign.target.countries && campaign.target.countries.length > 0) ? (
           campaign.target.countries.map((c) => (
-            <span key={c} className="rounded bg-emerald-950/30 border border-emerald-500/20 px-2 py-0.5 text-emerald-400 font-mono">
+            <span key={c} className="rounded bg-indigo-950/30 border border-indigo-500/20 px-2 py-0.5 text-indigo-400 font-mono">
               📍 {c}
             </span>
           ))

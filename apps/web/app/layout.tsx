@@ -16,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
-      <body className="min-h-screen bg-[#09090b] text-zinc-100 antialiased selection:bg-emerald-500/30 selection:text-emerald-200">
+      <body className="min-h-screen bg-[#09090b] text-zinc-100 antialiased selection:bg-indigo-500/30 selection:text-indigo-200">
         <Providers>
           <Navbar />
           <main className="flex-1">{children}</main>
@@ -29,7 +29,7 @@ export default function RootLayout({
               <span>AI Wait-State Opportunity Marketplace</span>
             </div>
             <div className="flex items-center gap-6">
-              <span className="text-emerald-400/90 font-mono">Zero Code Reading Guarantee</span>
+              <span className="text-indigo-400/90 font-mono">Zero Code Reading Guarantee</span>
               <a href="/privacy" className="hover:text-zinc-300 transition">Privacy & Trust</a>
               <a href="/demo" className="hover:text-zinc-300 transition">Interactive Demo</a>
             </div>

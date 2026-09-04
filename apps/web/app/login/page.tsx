@@ -55,7 +55,7 @@ function LoginContent() {
         {/* Brand Header */}
         <div className="text-center mb-8">
           <Link href="/" className="inline-flex items-center gap-2 font-mono font-bold text-white text-lg tracking-wider mb-3">
-            <div className="flex h-7 w-7 items-center justify-center rounded-md border border-emerald-500/30 bg-emerald-500/10 text-emerald-400">
+            <div className="flex h-7 w-7 items-center justify-center rounded-md border border-indigo-500/30 bg-indigo-500/10 text-indigo-400">
               <Terminal className="h-4 w-4" />
             </div>
             <span>REBATE</span>
@@ -70,16 +70,16 @@ function LoginContent() {
         <div className="mb-6 rounded-lg border border-zinc-800/80 bg-zinc-900/40 p-4">
           <div className="text-[11px] font-mono text-zinc-400 uppercase tracking-wider mb-2.5 flex items-center justify-between">
             <span>Instant Demo Login (Evaluator Mode)</span>
-            <span className="text-[10px] text-emerald-400">1-Click</span>
+            <span className="text-[10px] text-indigo-400">1-Click</span>
           </div>
           <div className="space-y-2">
             <button
               type="button"
               onClick={() => demoLogin('developer')}
-              className="w-full flex items-center justify-between rounded-md border border-zinc-800 bg-zinc-950 px-3 py-2 text-left text-xs text-zinc-200 hover:border-emerald-500/40 hover:bg-zinc-900/80 transition"
+              className="w-full flex items-center justify-between rounded-md border border-zinc-800 bg-zinc-950 px-3 py-2 text-left text-xs text-zinc-200 hover:border-indigo-500/40 hover:bg-zinc-900/80 transition"
             >
               <div className="flex items-center gap-2">
-                <div className="flex h-5 w-5 items-center justify-center rounded bg-emerald-500/10 text-emerald-400">
+                <div className="flex h-5 w-5 items-center justify-center rounded bg-indigo-500/10 text-indigo-400">
                   <User className="h-3 w-3" />
                 </div>
                 <div>
@@ -93,10 +93,10 @@ function LoginContent() {
             <button
               type="button"
               onClick={() => demoLogin('advertiser')}
-              className="w-full flex items-center justify-between rounded-md border border-zinc-800 bg-zinc-950 px-3 py-2 text-left text-xs text-zinc-200 hover:border-emerald-500/40 hover:bg-zinc-900/80 transition"
+              className="w-full flex items-center justify-between rounded-md border border-zinc-800 bg-zinc-950 px-3 py-2 text-left text-xs text-zinc-200 hover:border-indigo-500/40 hover:bg-zinc-900/80 transition"
             >
               <div className="flex items-center gap-2">
-                <div className="flex h-5 w-5 items-center justify-center rounded bg-cyan-500/10 text-cyan-400">
+                <div className="flex h-5 w-5 items-center justify-center rounded bg-purple-500/10 text-purple-400">
                   <Megaphone className="h-3 w-3" />
                 </div>
                 <div>
@@ -134,7 +134,7 @@ function LoginContent() {
                 onClick={() => setSelectedRole('developer')}
                 className={`rounded-lg py-2 text-xs font-medium transition border ${
                   selectedRole === 'developer'
-                    ? 'border-emerald-500/50 bg-emerald-500/10 text-emerald-300 font-semibold'
+                    ? 'border-indigo-500/50 bg-indigo-500/10 text-indigo-300 font-semibold'
                     : 'border-zinc-800 bg-zinc-950 text-zinc-400 hover:text-zinc-200'
                 }`}
               >
@@ -145,7 +145,7 @@ function LoginContent() {
                 onClick={() => setSelectedRole('advertiser')}
                 className={`rounded-lg py-2 text-xs font-medium transition border ${
                   selectedRole === 'advertiser'
-                    ? 'border-emerald-500/50 bg-emerald-500/10 text-emerald-300 font-semibold'
+                    ? 'border-indigo-500/50 bg-indigo-500/10 text-indigo-300 font-semibold'
                     : 'border-zinc-800 bg-zinc-950 text-zinc-400 hover:text-zinc-200'
                 }`}
               >
@@ -162,7 +162,7 @@ function LoginContent() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder={selectedRole === 'developer' ? 'priya.sharma@tech.in' : 'sponsor@example-ai.dev'}
-              className="w-full rounded-lg border border-zinc-800 bg-zinc-950 px-3 py-2 text-xs text-white placeholder-zinc-600 focus:border-emerald-500 focus:outline-none font-mono"
+              className="w-full rounded-lg border border-zinc-800 bg-zinc-950 px-3 py-2 text-xs text-white placeholder-zinc-600 focus:border-indigo-500 focus:outline-none font-mono"
             />
           </div>
 
@@ -176,14 +176,14 @@ function LoginContent() {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               placeholder="••••••••••••"
-              className="w-full rounded-lg border border-zinc-800 bg-zinc-950 px-3 py-2 text-xs text-white placeholder-zinc-600 focus:border-emerald-500 focus:outline-none font-mono"
+              className="w-full rounded-lg border border-zinc-800 bg-zinc-950 px-3 py-2 text-xs text-white placeholder-zinc-600 focus:border-indigo-500 focus:outline-none font-mono"
             />
           </div>
 
           <button
             type="submit"
             disabled={isSubmitting}
-            className="w-full rounded-lg bg-emerald-500 py-2.5 text-xs font-semibold text-black hover:bg-emerald-400 transition shadow-sm"
+            className="w-full rounded-lg bg-white py-2.5 text-xs font-semibold text-zinc-950 hover:bg-zinc-200 transition shadow-sm"
           >
             {isSubmitting ? 'Signing in...' : 'Sign In to Dashboard'}
           </button>
@@ -193,7 +193,7 @@ function LoginContent() {
           Don't have an account?{' '}
           <Link
             href={`/signup?role=${selectedRole}`}
-            className="text-emerald-400 hover:underline font-semibold"
+            className="text-indigo-400 hover:underline font-semibold"
           >
             Create account →
           </Link>

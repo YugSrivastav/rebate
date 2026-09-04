@@ -56,8 +56,8 @@ export default function DownloadPage() {
       {/* Hero Header */}
       <section className="border-b border-zinc-900 bg-zinc-950/60 pt-12 pb-16">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 text-center">
-          <div className="inline-flex items-center gap-2 rounded-full border border-emerald-500/20 bg-emerald-500/10 px-3 py-1 text-xs font-medium text-emerald-400 font-mono mb-4">
-            <Sparkles className="h-3 w-3" />
+          <div className="inline-flex items-center gap-2 rounded-full border border-indigo-500/20 bg-indigo-500/10 px-3 py-1 text-xs font-medium text-indigo-300 font-mono mb-4">
+            <Sparkles className="h-3 w-3 text-indigo-400" />
             <span>v1.0.0 RELEASE — UNIVERSAL DISTRIBUTION SUITE</span>
           </div>
 
@@ -75,7 +75,7 @@ export default function DownloadPage() {
               onClick={() => setActiveTab('cli')}
               className={`flex items-center gap-2 rounded-lg px-4 py-2 text-xs font-semibold font-mono transition ${
                 activeTab === 'cli'
-                  ? 'bg-emerald-500 text-black shadow-sm'
+                  ? 'bg-white text-zinc-950 shadow-sm'
                   : 'text-zinc-400 hover:text-white hover:bg-zinc-800/50'
               }`}
             >
@@ -87,7 +87,7 @@ export default function DownloadPage() {
               onClick={() => setActiveTab('sdk')}
               className={`flex items-center gap-2 rounded-lg px-4 py-2 text-xs font-semibold font-mono transition ${
                 activeTab === 'sdk'
-                  ? 'bg-emerald-500 text-black shadow-sm'
+                  ? 'bg-white text-zinc-950 shadow-sm'
                   : 'text-zinc-400 hover:text-white hover:bg-zinc-800/50'
               }`}
             >
@@ -99,7 +99,7 @@ export default function DownloadPage() {
               onClick={() => setActiveTab('mcp')}
               className={`flex items-center gap-2 rounded-lg px-4 py-2 text-xs font-semibold font-mono transition ${
                 activeTab === 'mcp'
-                  ? 'bg-emerald-500 text-black shadow-sm'
+                  ? 'bg-white text-zinc-950 shadow-sm'
                   : 'text-zinc-400 hover:text-white hover:bg-zinc-800/50'
               }`}
             >
@@ -120,14 +120,14 @@ export default function DownloadPage() {
               <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-zinc-900 pb-6 mb-6">
                 <div>
                   <h2 className="text-xl font-bold text-white font-mono flex items-center gap-2">
-                    <Terminal className="h-5 w-5 text-emerald-400" />
+                    <Terminal className="h-5 w-5 text-indigo-400" />
                     <span>Rebate Local Daemon & Terminal Client</span>
                   </h2>
                   <p className="mt-1 text-xs text-zinc-400">
                     The standalone background daemon that automatically detects when terminal AI agents enter wait states.
                   </p>
-                  <div className="mt-2 inline-flex items-center gap-2 rounded-md bg-emerald-500/10 border border-emerald-500/30 px-2.5 py-1 text-[11px] font-mono text-emerald-300">
-                    <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                  <div className="mt-2 inline-flex items-center gap-2 rounded-md bg-indigo-500/10 border border-indigo-500/20 px-2.5 py-1 text-[11px] font-mono text-indigo-300">
+                    <span className="h-1.5 w-1.5 rounded-full bg-indigo-400 animate-pulse" />
                     <span>Hackathon Prototype Note: Fully working version is built specifically for Google Antigravity CLI (`agy`). Other agents are in developer preview.</span>
                   </div>
                 </div>
@@ -175,7 +175,7 @@ export default function DownloadPage() {
                 <div className="rounded-lg border border-zinc-800/80 bg-zinc-900/50 p-5 flex flex-col justify-between">
                   <div>
                     <div className="text-xs font-mono text-zinc-400 mb-2 flex items-center justify-between">
-                      <span className="text-emerald-400 font-semibold">RECOMMENDED: 1-LINE INSTALL</span>
+                      <span className="text-indigo-400 font-semibold">RECOMMENDED: 1-LINE INSTALL</span>
                       <span className="text-[11px] text-zinc-500">Auto-updates</span>
                     </div>
                     <p className="text-xs text-zinc-300 mb-4">
@@ -189,7 +189,7 @@ export default function DownloadPage() {
                         className="text-zinc-400 hover:text-white transition flex-shrink-0"
                         title="Copy command"
                       >
-                        {copiedCmd === 'cmd_oneliner' ? <Check className="h-3.5 w-3.5 text-emerald-400" /> : <Copy className="h-3.5 w-3.5" />}
+                        {copiedCmd === 'cmd_oneliner' ? <Check className="h-3.5 w-3.5 text-indigo-400" /> : <Copy className="h-3.5 w-3.5" />}
                       </button>
                     </div>
                   </div>
@@ -219,7 +219,7 @@ export default function DownloadPage() {
                     <a
                       href={getDirectDownloadUrl()}
                       download
-                      className="w-full inline-flex items-center justify-center gap-2 rounded-lg bg-emerald-500 py-3 text-xs font-semibold text-black hover:bg-emerald-400 transition shadow-sm font-mono"
+                      className="w-full inline-flex items-center justify-center gap-2 rounded-lg bg-white py-3 text-xs font-semibold text-zinc-950 hover:bg-zinc-200 transition shadow-[0_0_15px_rgba(255,255,255,0.1)] font-mono"
                     >
                       <Download className="h-4 w-4" />
                       <span>
@@ -242,13 +242,14 @@ export default function DownloadPage() {
               </div>
 
               {/* 30-Second Quickstart Steps */}
+              {/* 30-Second Quickstart Steps */}
               <div className="mt-8 pt-8 border-t border-zinc-900">
                 <h3 className="text-xs font-mono font-semibold text-zinc-300 uppercase tracking-wider mb-4">
                   Quickstart in 3 steps
                 </h3>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                   <div className="rounded-lg border border-zinc-800/60 bg-zinc-900/30 p-4">
-                    <div className="text-xs font-mono text-emerald-400 mb-1">STEP 1 • ONE-TIME SETUP</div>
+                    <div className="text-xs font-mono text-indigo-400 mb-1">STEP 1 • ONE-TIME SETUP</div>
                     <div className="text-xs font-semibold text-white mb-2">Connect Your Developer ID</div>
                     <div className="rounded bg-zinc-950 px-2.5 py-1.5 font-mono text-[11px] text-zinc-400">
                       rebate login
@@ -259,9 +260,9 @@ export default function DownloadPage() {
                   </div>
 
                   <div className="rounded-lg border border-zinc-800/60 bg-zinc-900/30 p-4">
-                    <div className="text-xs font-mono text-emerald-400 mb-1">STEP 2 • EVERYDAY USAGE</div>
+                    <div className="text-xs font-mono text-indigo-400 mb-1">STEP 2 • EVERYDAY USAGE</div>
                     <div className="text-xs font-semibold text-white mb-2">Run Your Agent As Usual</div>
-                    <div className="rounded bg-zinc-950 px-2.5 py-1.5 font-mono text-[11px] text-emerald-400 font-bold">
+                    <div className="rounded bg-zinc-950 px-2.5 py-1.5 font-mono text-[11px] text-white font-bold">
                       agy
                     </div>
                     <p className="mt-2 text-[11px] text-zinc-500">
@@ -270,7 +271,7 @@ export default function DownloadPage() {
                   </div>
 
                   <div className="rounded-lg border border-zinc-800/60 bg-zinc-900/30 p-4">
-                    <div className="text-xs font-mono text-emerald-400 mb-1">STEP 3 • PASSIVE REWARDS</div>
+                    <div className="text-xs font-mono text-indigo-400 mb-1">STEP 3 • PASSIVE REWARDS</div>
                     <div className="text-xs font-semibold text-white mb-2">Earn 70% Value Share</div>
                     <div className="rounded bg-zinc-950 px-2.5 py-1.5 font-mono text-[11px] text-zinc-400">
                       [press o to view]
@@ -293,7 +294,7 @@ export default function DownloadPage() {
                 FOR AGENT CREATORS & FRAMEWORK AUTHORS
               </div>
               <h2 className="text-xl font-bold text-white font-mono flex items-center gap-2">
-                <Code2 className="h-5 w-5 text-emerald-400" />
+                <Code2 className="h-5 w-5 text-indigo-400" />
                 <span>Rebate Agent SDK (`@rebate/sdk`)</span>
               </h2>
               <p className="mt-1 text-xs text-zinc-400 max-w-2xl">
@@ -310,7 +311,7 @@ export default function DownloadPage() {
                   onClick={() => copyToClipboard('npm install @rebate/sdk', 'sdk_npm')}
                   className="text-zinc-400 hover:text-white"
                 >
-                  {copiedCmd === 'sdk_npm' ? <Check className="h-3.5 w-3.5 text-emerald-400" /> : <Copy className="h-3.5 w-3.5" />}
+                  {copiedCmd === 'sdk_npm' ? <Check className="h-3.5 w-3.5 text-indigo-400" /> : <Copy className="h-3.5 w-3.5" />}
                 </button>
               </div>
             </div>
@@ -350,7 +351,7 @@ await agent.executeTask('Refactor auth service with unit tests');`}</pre>
                 MODEL CONTEXT PROTOCOL (MCP)
               </div>
               <h2 className="text-xl font-bold text-white font-mono flex items-center gap-2">
-                <Boxes className="h-5 w-5 text-emerald-400" />
+                <Boxes className="h-5 w-5 text-indigo-400" />
                 <span>Rebate MCP Server (`@rebate/mcp`)</span>
               </h2>
               <p className="mt-1 text-xs text-zinc-400 max-w-2xl">
@@ -383,21 +384,21 @@ await agent.executeTask('Refactor auth service with unit tests');`}</pre>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                 <div className="rounded-lg border border-zinc-800 bg-zinc-900/40 p-3 text-xs">
-                  <code className="text-emerald-400 font-mono">get_rebate_wallet</code>
+                  <code className="text-indigo-400 font-mono">get_rebate_wallet</code>
                   <p className="mt-1 text-[11px] text-zinc-400">
                     Returns current balances across INR, USD, AI tokens, and cloud credits.
                   </p>
                 </div>
 
                 <div className="rounded-lg border border-zinc-800 bg-zinc-900/40 p-3 text-xs">
-                  <code className="text-emerald-400 font-mono">list_opportunities</code>
+                  <code className="text-indigo-400 font-mono">list_opportunities</code>
                   <p className="mt-1 text-[11px] text-zinc-400">
                     Queries matched opportunities based on developer skills and target field.
                   </p>
                 </div>
 
                 <div className="rounded-lg border border-zinc-800 bg-zinc-900/40 p-3 text-xs">
-                  <code className="text-emerald-400 font-mono">redeem_credits</code>
+                  <code className="text-indigo-400 font-mono">redeem_credits</code>
                   <p className="mt-1 text-[11px] text-zinc-400">
                     Instantly redeems earned credits into API keys or cloud vouchers.
                   </p>
@@ -431,7 +432,7 @@ await agent.executeTask('Refactor auth service with unit tests');`}</pre>
               </thead>
               <tbody className="divide-y divide-zinc-900 text-zinc-300">
                 <tr>
-                  <td className="py-3 pr-4 font-bold text-emerald-400">Rebate CLI Daemon</td>
+                  <td className="py-3 pr-4 font-bold text-indigo-400">Rebate CLI Daemon</td>
                   <td className="py-3 pr-4">Terminal Developers</td>
                   <td className="py-3 pr-4">Local OS background process</td>
                   <td className="py-3 pr-4">Hooks process wait states; 1-line clean terminal status</td>
@@ -455,8 +456,8 @@ await agent.executeTask('Refactor auth service with unit tests');`}</pre>
             </table>
           </div>
 
-          <div className="mt-6 rounded-lg border border-emerald-500/20 bg-emerald-500/5 p-4 flex items-start gap-3 text-xs text-zinc-300">
-            <ShieldCheck className="h-5 w-5 text-emerald-400 flex-shrink-0 mt-0.5" />
+          <div className="mt-6 rounded-lg border border-zinc-800 bg-zinc-900/40 p-4 flex items-start gap-3 text-xs text-zinc-300">
+            <ShieldCheck className="h-5 w-5 text-indigo-400 flex-shrink-0 mt-0.5" />
             <div>
               <strong className="text-white">The Zero Code Reading Rule applies to all tiers:</strong> Rebate operates strictly on <strong className="text-white">lifecycle duration events</strong> and voluntary profile targeting criteria. Neither the CLI daemon, SDK, nor MCP server ever inspects your source code, repo files, or LLM prompts.
             </div>
@@ -474,7 +475,7 @@ await agent.executeTask('Refactor auth service with unit tests');`}</pre>
           <div className="mt-5 flex items-center justify-center gap-3">
             <Link
               href="/signup?role=developer"
-              className="inline-flex items-center gap-2 rounded-lg bg-emerald-500 px-5 py-2.5 text-xs font-semibold text-black hover:bg-emerald-400 transition shadow-sm font-mono"
+              className="inline-flex items-center gap-2 rounded-lg bg-white px-5 py-2.5 text-xs font-semibold text-zinc-950 hover:bg-zinc-200 transition shadow-[0_0_15px_rgba(255,255,255,0.1)] font-mono"
             >
               <span>Create Developer Profile</span>
               <ArrowRight className="h-3.5 w-3.5" />
@@ -483,7 +484,7 @@ await agent.executeTask('Refactor auth service with unit tests');`}</pre>
               href="/demo"
               className="inline-flex items-center gap-1.5 rounded-lg border border-zinc-800 bg-zinc-950 px-4 py-2.5 text-xs font-medium text-zinc-300 hover:text-white transition font-mono"
             >
-              <Sparkles className="h-3 w-3 text-emerald-400" />
+              <Sparkles className="h-3 w-3 text-indigo-400" />
               <span>Try Wait-State Simulator</span>
             </Link>
           </div>

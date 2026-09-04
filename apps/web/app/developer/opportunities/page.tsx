@@ -80,7 +80,7 @@ export default function OpportunitiesPage() {
   if (authLoading || loading) {
     return (
       <div className="flex h-96 items-center justify-center font-mono text-xs text-zinc-500">
-        <span className="animate-spin text-emerald-400 mr-2">⠋</span> Loading developer opportunities...
+        <span className="animate-spin text-indigo-400 mr-2">⠋</span> Loading developer opportunities...
       </div>
     );
   }
@@ -101,7 +101,7 @@ export default function OpportunitiesPage() {
           <div className="mt-6 space-y-2.5">
             <Link
               href="/login?redirect=/developer/opportunities"
-              className="w-full inline-flex items-center justify-center gap-2 rounded-lg bg-emerald-500 py-2.5 text-xs font-semibold text-black hover:bg-emerald-400 transition"
+              className="w-full inline-flex items-center justify-center gap-2 rounded-lg bg-white py-2.5 text-xs font-semibold text-zinc-950 hover:bg-zinc-200 transition"
             >
               <span>Sign In to Your Account</span>
               <ArrowRight className="h-3.5 w-3.5" />
@@ -112,7 +112,7 @@ export default function OpportunitiesPage() {
               onClick={() => demoLogin('developer')}
               className="w-full inline-flex items-center justify-center gap-2 rounded-lg border border-zinc-800 bg-zinc-900 py-2.5 text-xs font-medium text-zinc-300 hover:text-white hover:border-zinc-700 transition font-mono"
             >
-              <User className="h-3.5 w-3.5 text-emerald-400" />
+              <User className="h-3.5 w-3.5 text-indigo-400" />
               <span>1-Click Demo Login (Priya Sharma)</span>
             </button>
           </div>

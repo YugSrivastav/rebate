@@ -45,7 +45,7 @@ export default function OnboardingPage() {
   if (isLoading || !isAuthenticated) {
     return (
       <div className="flex h-96 items-center justify-center font-mono text-xs text-zinc-500">
-        <span className="animate-spin text-emerald-400 mr-2">⠋</span> Redirecting to developer signup...
+        <span className="animate-spin text-indigo-400 mr-2">⠋</span> Redirecting to developer signup...
       </div>
     );
   }

@@ -150,7 +150,7 @@ export default function NewCampaignPage() {
   if (isLoading) {
     return (
       <div className="flex h-96 items-center justify-center font-mono text-xs text-zinc-500">
-        <span className="animate-spin text-emerald-400 mr-2">⠋</span> Checking advertiser credentials...
+        <span className="animate-spin text-indigo-400 mr-2">⠋</span> Checking advertiser credentials...
       </div>
     );
   }
@@ -170,7 +170,7 @@ export default function NewCampaignPage() {
           <div className="mt-6 space-y-2.5">
             <Link
               href="/login?redirect=/advertiser/campaigns/new"
-              className="w-full inline-flex items-center justify-center gap-2 rounded-lg bg-emerald-500 py-2.5 text-xs font-semibold text-black hover:bg-emerald-400 transition"
+              className="w-full inline-flex items-center justify-center gap-2 rounded-lg bg-white py-2.5 text-xs font-semibold text-zinc-950 hover:bg-zinc-200 transition shadow-sm"
             >
               <span>Sign In to Advertiser Account</span>
               <ArrowRight className="h-3.5 w-3.5" />
@@ -214,7 +214,7 @@ export default function NewCampaignPage() {
           <button
             type="button"
             onClick={() => handleApplyPreset('ai_intern')}
-            className="rounded bg-zinc-800/80 px-2.5 py-1 text-xs font-mono text-emerald-400 hover:bg-zinc-800 transition"
+            className="rounded bg-zinc-800/80 px-2.5 py-1 text-xs font-mono text-indigo-400 hover:bg-zinc-800 transition"
           >
             + Preset: AI Intern
           </button>
@@ -232,7 +232,7 @@ export default function NewCampaignPage() {
         {/* Section 1: Opportunity Details */}
         <div className="rounded-xl border border-zinc-800/80 bg-zinc-900/40 p-6 shadow-xl">
           <h2 className="text-sm font-bold text-white uppercase tracking-wider mb-4 flex items-center gap-2">
-            <Sparkles className="h-4 w-4 text-emerald-400" />
+            <Sparkles className="h-4 w-4 text-indigo-400" />
             <span>1. Opportunity Details</span>
           </h2>
 
@@ -245,7 +245,7 @@ export default function NewCampaignPage() {
                 value={companyName}
                 onChange={(e) => setCompanyName(e.target.value)}
                 placeholder="e.g. Example AI Labs"
-                className="w-full rounded-lg border border-zinc-800 bg-zinc-950 px-3 py-2 text-xs text-white placeholder-zinc-500 focus:border-emerald-500 focus:outline-none"
+                className="w-full rounded-lg border border-zinc-800 bg-zinc-950 px-3 py-2 text-xs text-white placeholder-zinc-500 focus:border-indigo-500 focus:outline-none"
               />
             </div>
 
@@ -254,7 +254,7 @@ export default function NewCampaignPage() {
               <select
                 value={opportunityType}
                 onChange={(e) => setOpportunityType(e.target.value as OpportunityCategory)}
-                className="w-full rounded-lg border border-zinc-800 bg-zinc-950 px-3 py-2 text-xs text-white focus:border-emerald-500 focus:outline-none"
+                className="w-full rounded-lg border border-zinc-800 bg-zinc-950 px-3 py-2 text-xs text-white focus:border-indigo-500 focus:outline-none"
               >
                 {OPPORTUNITY_CATEGORIES.map((cat) => (
                   <option key={cat.id} value={cat.id}>
@@ -273,7 +273,7 @@ export default function NewCampaignPage() {
               value={title}
               onChange={(e) => setTitle(e.target.value)}
               placeholder="e.g. AI Engineering Internship — Summer 2026"
-              className="w-full rounded-lg border border-zinc-800 bg-zinc-950 px-3 py-2 text-xs text-white placeholder-zinc-500 focus:border-emerald-500 focus:outline-none"
+              className="w-full rounded-lg border border-zinc-800 bg-zinc-950 px-3 py-2 text-xs text-white placeholder-zinc-500 focus:border-indigo-500 focus:outline-none"
             />
           </div>
 
@@ -286,7 +286,7 @@ export default function NewCampaignPage() {
                 value={destinationUrl}
                 onChange={(e) => setDestinationUrl(e.target.value)}
                 placeholder="https://company.com/apply"
-                className="w-full rounded-lg border border-zinc-800 bg-zinc-950 px-3 py-2 text-xs text-white placeholder-zinc-500 focus:border-emerald-500 focus:outline-none font-mono"
+                className="w-full rounded-lg border border-zinc-800 bg-zinc-950 px-3 py-2 text-xs text-white placeholder-zinc-500 focus:border-indigo-500 focus:outline-none font-mono"
               />
             </div>
 
@@ -297,7 +297,7 @@ export default function NewCampaignPage() {
                 value={cta}
                 onChange={(e) => setCta(e.target.value)}
                 placeholder="e.g. Apply now, Claim credits, Register"
-                className="w-full rounded-lg border border-zinc-800 bg-zinc-950 px-3 py-2 text-xs text-white placeholder-zinc-500 focus:border-emerald-500 focus:outline-none"
+                className="w-full rounded-lg border border-zinc-800 bg-zinc-950 px-3 py-2 text-xs text-white placeholder-zinc-500 focus:border-indigo-500 focus:outline-none"
               />
             </div>
           </div>
@@ -309,7 +309,7 @@ export default function NewCampaignPage() {
               value={description}
               onChange={(e) => setDescription(e.target.value)}
               placeholder="Describe the opportunity and what developers will work on..."
-              className="w-full rounded-lg border border-zinc-800 bg-zinc-950 px-3 py-2 text-xs text-white placeholder-zinc-500 focus:border-emerald-500 focus:outline-none"
+              className="w-full rounded-lg border border-zinc-800 bg-zinc-950 px-3 py-2 text-xs text-white placeholder-zinc-500 focus:border-indigo-500 focus:outline-none"
             />
           </div>
 
@@ -326,7 +326,7 @@ export default function NewCampaignPage() {
                   }}
                   className={`rounded-lg px-2.5 py-1 text-xs transition border ${
                     logoUrl === preset.url && !customLogoUrl
-                      ? 'border-emerald-500 bg-emerald-500/10 text-emerald-300'
+                      ? 'border-indigo-500 bg-indigo-500/10 text-indigo-300'
                       : 'border-zinc-800 bg-zinc-950 text-zinc-400'
                   }`}
                 >
@@ -339,7 +339,7 @@ export default function NewCampaignPage() {
               value={customLogoUrl}
               onChange={(e) => setCustomLogoUrl(e.target.value)}
               placeholder="Or enter custom logo image URL..."
-              className="w-full rounded-lg border border-zinc-800 bg-zinc-950 px-3 py-2 text-xs text-white placeholder-zinc-500 focus:border-emerald-500 focus:outline-none font-mono"
+              className="w-full rounded-lg border border-zinc-800 bg-zinc-950 px-3 py-2 text-xs text-white placeholder-zinc-500 focus:border-indigo-500 focus:outline-none font-mono"
             />
           </div>
         </div>
@@ -347,7 +347,7 @@ export default function NewCampaignPage() {
         {/* Section 2: Developer Audience Targeting */}
         <div className="rounded-xl border border-zinc-800/80 bg-zinc-900/40 p-6 shadow-xl">
           <h2 className="text-sm font-bold text-white uppercase tracking-wider mb-4 flex items-center gap-2">
-            <Sparkles className="h-4 w-4 text-emerald-400" />
+            <Sparkles className="h-4 w-4 text-indigo-400" />
             <span>2. Developer Targeting Parameters</span>
           </h2>
 
@@ -357,7 +357,7 @@ export default function NewCampaignPage() {
               <select
                 value={targetRole}
                 onChange={(e) => setTargetRole(e.target.value as DeveloperRole)}
-                className="w-full rounded-lg border border-zinc-800 bg-zinc-950 px-3 py-2 text-xs text-white focus:border-emerald-500 focus:outline-none"
+                className="w-full rounded-lg border border-zinc-800 bg-zinc-950 px-3 py-2 text-xs text-white focus:border-indigo-500 focus:outline-none"
               >
                 {DEVELOPER_ROLES.map((r) => (
                   <option key={r} value={r}>{r}</option>
@@ -370,7 +370,7 @@ export default function NewCampaignPage() {
               <select
                 value={targetField}
                 onChange={(e) => setTargetField(e.target.value as DeveloperField)}
-                className="w-full rounded-lg border border-zinc-800 bg-zinc-950 px-3 py-2 text-xs text-white focus:border-emerald-500 focus:outline-none"
+                className="w-full rounded-lg border border-zinc-800 bg-zinc-950 px-3 py-2 text-xs text-white focus:border-indigo-500 focus:outline-none"
               >
                 {DEVELOPER_FIELDS.map((f) => (
                   <option key={f} value={f}>{f}</option>
@@ -383,7 +383,7 @@ export default function NewCampaignPage() {
               <select
                 value={targetEducation}
                 onChange={(e) => setTargetEducation(e.target.value as EducationStatus)}
-                className="w-full rounded-lg border border-zinc-800 bg-zinc-950 px-3 py-2 text-xs text-white focus:border-emerald-500 focus:outline-none"
+                className="w-full rounded-lg border border-zinc-800 bg-zinc-950 px-3 py-2 text-xs text-white focus:border-indigo-500 focus:outline-none"
               >
                 {EDUCATION_STATUSES.map((edu) => (
                   <option key={edu} value={edu}>{edu}</option>
@@ -404,7 +404,7 @@ export default function NewCampaignPage() {
                     onClick={() => toggleSkill(skill)}
                     className={`rounded px-2.5 py-1 text-xs font-mono transition border ${
                       active
-                        ? 'border-emerald-500 bg-emerald-500/15 text-emerald-300 font-semibold'
+                        ? 'border-indigo-500 bg-indigo-500/15 text-indigo-300 font-semibold'
                         : 'border-zinc-800 bg-zinc-950/60 text-zinc-400 hover:border-zinc-700'
                     }`}
                   >
@@ -423,7 +423,7 @@ export default function NewCampaignPage() {
                 value={targetCountry}
                 onChange={(e) => setTargetCountry(e.target.value)}
                 placeholder="Leave blank for global"
-                className="w-full rounded-lg border border-zinc-800 bg-zinc-950 px-3 py-2 text-xs text-white placeholder-zinc-500 focus:border-emerald-500 focus:outline-none font-mono"
+                className="w-full rounded-lg border border-zinc-800 bg-zinc-950 px-3 py-2 text-xs text-white placeholder-zinc-500 focus:border-indigo-500 focus:outline-none font-mono"
               />
             </div>
             <div>
@@ -433,7 +433,7 @@ export default function NewCampaignPage() {
                 value={targetState}
                 onChange={(e) => setTargetState(e.target.value)}
                 placeholder="e.g. Karnataka, California"
-                className="w-full rounded-lg border border-zinc-800 bg-zinc-950 px-3 py-2 text-xs text-white placeholder-zinc-500 focus:border-emerald-500 focus:outline-none font-mono"
+                className="w-full rounded-lg border border-zinc-800 bg-zinc-950 px-3 py-2 text-xs text-white placeholder-zinc-500 focus:border-indigo-500 focus:outline-none font-mono"
               />
             </div>
           </div>
@@ -443,7 +443,7 @@ export default function NewCampaignPage() {
               type="checkbox"
               checked={allowUnspecified}
               onChange={(e) => setAllowUnspecified(e.target.checked)}
-              className="rounded border-zinc-700 bg-zinc-900 text-emerald-500 focus:ring-emerald-500"
+              className="rounded border-zinc-700 bg-zinc-900 text-indigo-500 focus:ring-indigo-500"
             />
             <span>Allow developers who choose not to share their geographic location</span>
           </label>
@@ -452,7 +452,7 @@ export default function NewCampaignPage() {
         {/* Section 3: Bidding & Budget */}
         <div className="rounded-xl border border-zinc-800/80 bg-zinc-900/40 p-6 shadow-xl">
           <h2 className="text-sm font-bold text-white uppercase tracking-wider mb-4 flex items-center gap-2">
-            <DollarSign className="h-4 w-4 text-emerald-400" />
+            <DollarSign className="h-4 w-4 text-indigo-400" />
             <span>3. Budget, Bidding & Billing Model</span>
           </h2>
 
@@ -466,7 +466,7 @@ export default function NewCampaignPage() {
                 required
                 value={bidCpm}
                 onChange={(e) => setBidCpm(parseFloat(e.target.value) || 0)}
-                className="w-full rounded-lg border border-zinc-800 bg-zinc-950 px-3 py-2 text-xs text-white focus:border-emerald-500 focus:outline-none font-mono font-bold"
+                className="w-full rounded-lg border border-zinc-800 bg-zinc-950 px-3 py-2 text-xs text-white focus:border-indigo-500 focus:outline-none font-mono font-bold"
               />
               <span className="text-[11px] text-zinc-500">Per 1,000 verified impressions</span>
             </div>
@@ -480,7 +480,7 @@ export default function NewCampaignPage() {
                 required
                 value={budget}
                 onChange={(e) => setBudget(parseFloat(e.target.value) || 0)}
-                className="w-full rounded-lg border border-zinc-800 bg-zinc-950 px-3 py-2 text-xs text-white focus:border-emerald-500 focus:outline-none font-mono font-bold"
+                className="w-full rounded-lg border border-zinc-800 bg-zinc-950 px-3 py-2 text-xs text-white focus:border-indigo-500 focus:outline-none font-mono font-bold"
               />
               <span className="text-[11px] text-zinc-500">Simulated balance deduction</span>
             </div>
@@ -490,7 +490,7 @@ export default function NewCampaignPage() {
               <select
                 value={billingModel}
                 onChange={(e) => setBillingModel(e.target.value as BillingModel)}
-                className="w-full rounded-lg border border-zinc-800 bg-zinc-950 px-3 py-2 text-xs text-white focus:border-emerald-500 focus:outline-none"
+                className="w-full rounded-lg border border-zinc-800 bg-zinc-950 px-3 py-2 text-xs text-white focus:border-indigo-500 focus:outline-none"
               >
                 <option value="cpm_impression">Verified CPM (Default)</option>
                 <option value="cpc_click">Cost Per Click (CPC)</option>
@@ -519,7 +519,7 @@ export default function NewCampaignPage() {
           <button
             type="submit"
             disabled={submitting}
-            className="rounded-lg bg-emerald-500 px-6 py-2.5 text-xs font-semibold text-black hover:bg-emerald-400 transition shadow-lg shadow-emerald-500/20"
+            className="rounded-lg bg-white px-6 py-2.5 text-xs font-semibold text-zinc-950 hover:bg-zinc-200 transition shadow-[0_0_15px_rgba(255,255,255,0.1)]"
           >
             {submitting ? 'Launching Campaign...' : 'Launch Campaign in Auction'}
           </button>
