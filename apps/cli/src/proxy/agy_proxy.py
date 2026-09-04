@@ -42,10 +42,15 @@ class RebateAgyProxy:
         self.active_opportunity = self.default_opportunity
         self.active_impression_id = "imp_initial_antigravity"
         self.wait_start_time = None
-        self.is_generating = False
+        self.last_wait_time = 0
+        self.in_wait_state = False
         self.session_id = f"sess_agy_{int(time.time() * 1000)}"
         self.lock = threading.Lock()
         self.proc = None
+
+    def is_opportunity_active(self):
+        # Active if currently in wait state OR if wait state was visible in the last 3.5 seconds
+        return self.in_wait_state or ((time.time() - self.last_wait_time) < 3.5)
 
     def fetch_opportunity(self):
         try:
@@ -64,6 +69,39 @@ class RebateAgyProxy:
                         self.active_impression_id = data.get("impressionId") or self.active_impression_id
         except Exception:
             pass
+
+    def _open_opportunity(self):
+        with self.lock:
+            opp = self.active_opportunity or self.default_opportunity
+        if not opp:
+            return
+        opp_id = opp.get("id", "opp_jetbrains")
+        dest_url = f"{API_URL}/opportunity/{opp_id}"
+
+        # Instantly open in default browser on Windows
+        try:
+            if hasattr(os, 'startfile'):
+                os.startfile(dest_url)
+            else:
+                webbrowser.open(dest_url)
+        except Exception:
+            webbrowser.open(dest_url)
+
+        # Record click asynchronously
+        def _click():
+            try:
+                click_url = f"{API_URL}/api/ledger/click"
+                p = json.dumps({
+                    "campaignId": opp.get("campaignId"),
+                    "developerId": DEVELOPER_ID,
+                    "destinationUrl": opp.get("destinationUrl"),
+                    "impressionId": self.active_impression_id or "cli_click"
+                }).encode('utf-8')
+                req = urllib.request.Request(click_url, data=p, headers={"Content-Type": "application/json"})
+                urllib.request.urlopen(req, timeout=2.0)
+            except Exception:
+                pass
+        threading.Thread(target=_click, daemon=True).start()
 
     def settle_impression(self, duration_seconds):
         if not self.active_impression_id:
@@ -135,28 +173,53 @@ class RebateAgyProxy:
                     pass
 
     def _handle_output_chunk(self, chunk: str):
-        # Check for Generating...
-        if "Generating..." in chunk:
-            now = time.time()
-            if not self.is_generating:
-                self.is_generating = True
+        wait_patterns = [
+            "Working...",
+            "Generating...",
+            "Thinking...",
+            "Planning...",
+            "Searching...",
+            "Executing...",
+            "Working",
+            "Generating",
+        ]
+
+        matched_pattern = None
+        for pat in wait_patterns:
+            if pat in chunk:
+                if pat in ("Working", "Generating") and (f"{pat} on" in chunk or f"{pat} image" in chunk):
+                    continue
+                matched_pattern = pat
+                break
+
+        now = time.time()
+        if matched_pattern:
+            self.last_wait_time = now
+            if not self.in_wait_state:
+                self.in_wait_state = True
                 self.wait_start_time = now
                 threading.Thread(target=self.fetch_opportunity, daemon=True).start()
 
             with self.lock:
-                opp = self.active_opportunity
+                opp = self.active_opportunity or self.default_opportunity
 
-            if opp:
-                title = opp.get("headline") or opp.get("title") or "Developer Opportunity"
-                if len(title) > 42:
-                    title = title[:40] + "…"
-                replacement = f"Generating... \x1b[90m•\x1b[0m \x1b[36;1mSponsored: {title}\x1b[0m \x1b[90m[press o to view]\x1b[0m"
-                chunk = chunk.replace("Generating...", replacement)
+            title = opp.get("headline") or opp.get("title") or "Developer Opportunity"
+            if len(title) > 36:
+                title = title[:34] + "…"
 
-        elif self.is_generating:
-            if "\r" in chunk or "\n" in chunk or len(chunk) > 30:
-                duration = time.time() - (self.wait_start_time or time.time())
-                self.is_generating = False
+            opp_id = opp.get("id", "opp_jetbrains")
+            opp_url = f"{API_URL}/opportunity/{opp_id}"
+
+            # OSC 8 Hyperlink makes the title and [open] directly CLICKABLE with mouse in terminal
+            clickable_part = f"\x1b]8;;{opp_url}\x1b\\\x1b[36;1mSponsored: {title}\x1b[0m \x1b[33;1;4m[open ↗]\x1b[0m\x1b]8;;\x1b\\"
+            replacement = f"{matched_pattern} \x1b[90m•\x1b[0m {clickable_part} \x1b[90m(click or press 'o')\x1b[0m"
+            chunk = chunk.replace(matched_pattern, replacement, 1)
+
+        elif self.in_wait_state:
+            # End wait state only if > 1.2s has passed without any wait patterns
+            if (now - self.last_wait_time >= 1.2) or ("\n\n" in chunk and len(chunk) > 35):
+                duration = max(1.0, self.last_wait_time - (self.wait_start_time or now))
+                self.in_wait_state = False
                 self.settle_impression(duration)
 
         sys.stdout.write(chunk)
@@ -167,29 +230,12 @@ class RebateAgyProxy:
             try:
                 if msvcrt.kbhit():
                     ch = msvcrt.getwch()
-                    if self.is_generating and ch in ('o', 'O'):
-                        with self.lock:
-                            opp = self.active_opportunity
-                        if opp:
-                            opp_id = opp.get("id")
-                            dest_url = f"{API_URL}/opportunity/{opp_id}"
-                            webbrowser.open(dest_url)
-                            try:
-                                def _click():
-                                    click_url = f"{API_URL}/api/ledger/click"
-                                    p = json.dumps({
-                                        "campaignId": opp.get("campaignId"),
-                                        "developerId": DEVELOPER_ID,
-                                        "destinationUrl": opp.get("destinationUrl"),
-                                        "impressionId": self.active_impression_id or "cli_click"
-                                    }).encode('utf-8')
-                                    req = urllib.request.Request(click_url, data=p, headers={"Content-Type": "application/json"})
-                                    urllib.request.urlopen(req, timeout=2.0)
-                                threading.Thread(target=_click, daemon=True).start()
-                            except Exception:
-                                pass
+                    # Hotkey: 'o' or 'O' while opportunity is active opens in browser
+                    if ch in ('o', 'O') and self.is_opportunity_active():
+                        self._open_opportunity()
                         continue
 
+                    # Handle multi-byte keys (arrows, F-keys, etc.)
                     if ch in ('\x00', '\xe0'):
                         ch2 = msvcrt.getwch()
                         self.proc.write(ch + ch2)

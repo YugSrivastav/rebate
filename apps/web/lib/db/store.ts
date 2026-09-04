@@ -34,8 +34,24 @@ export interface DatabaseSchema {
   fraudFlags: FraudFlag[];
 }
 
-const DATA_DIR = path.resolve(process.cwd(), 'data');
-const DB_FILE = path.join(DATA_DIR, 'rebate.db.json');
+function resolveDbPaths(): { dataDir: string; dbFile: string } {
+  const candidates = [
+    path.resolve(process.cwd(), 'data', 'rebate.db.json'),
+    path.resolve(process.cwd(), '..', 'data', 'rebate.db.json'),
+    path.resolve(process.cwd(), 'apps', 'web', 'data', 'rebate.db.json'),
+  ];
+  for (const c of candidates) {
+    if (fs.existsSync(c)) {
+      return { dataDir: path.dirname(c), dbFile: c };
+    }
+  }
+  return {
+    dataDir: path.resolve(process.cwd(), 'data'),
+    dbFile: path.resolve(process.cwd(), 'data', 'rebate.db.json'),
+  };
+}
+
+const { dataDir: DATA_DIR, dbFile: DB_FILE } = resolveDbPaths();
 
 class DataStore {
   private data: DatabaseSchema | null = null;
@@ -92,17 +108,22 @@ class DataStore {
 
   public save(): void {
     if (!this.data) return;
-    if (!fs.existsSync(DATA_DIR)) {
-      fs.mkdirSync(DATA_DIR, { recursive: true });
-    }
-    const tempFile = `${DB_FILE}.tmp.${Date.now()}`;
-    fs.writeFileSync(tempFile, JSON.stringify(this.data, null, 2), 'utf-8');
     try {
-      fs.renameSync(tempFile, DB_FILE);
-    } catch {
-      // Fallback for Windows locking
-      fs.copyFileSync(tempFile, DB_FILE);
-      try { fs.unlinkSync(tempFile); } catch {}
+      if (!fs.existsSync(DATA_DIR)) {
+        fs.mkdirSync(DATA_DIR, { recursive: true });
+      }
+      const tempFile = `${DB_FILE}.tmp.${Date.now()}`;
+      fs.writeFileSync(tempFile, JSON.stringify(this.data, null, 2), 'utf-8');
+      try {
+        fs.renameSync(tempFile, DB_FILE);
+      } catch {
+        fs.copyFileSync(tempFile, DB_FILE);
+        try { fs.unlinkSync(tempFile); } catch {}
+      }
+    } catch (err) {
+      // In serverless environments (e.g. Vercel), file system may be read-only.
+      // Data remains in-memory for the lifetime of the container instance.
+      console.warn('[DataStore] Filesystem write bypassed in read-only environment:', err);
     }
   }
 
