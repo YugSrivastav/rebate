@@ -1,0 +1,30 @@
+{
+  "name": "rebate-workspace",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Rebate: AI wait-state developer opportunity & reward layer",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace=@rebate/web",
+    "dev:web": "npm run dev --workspace=@rebate/web",
+    "dev:cli": "npm run dev --workspace=@rebate/cli",
+    "build": "npm run build --workspaces",
+    "test": "npm run test --workspaces --if-present",
+    "cli": "npm run start --workspace=@rebate/cli",
+    "agy": "python apps/cli/src/proxy/agy_proxy.py",
+    "seed": "npm run seed --workspace=@rebate/web"
+  },
+  "keywords": [
+    "ai",
+    "developer-tools",
+    "wait-state",
+    "opportunities",
+    "rewards",
+    "hackathon"
+  ],
+  "author": "Rebate Team",
+  "license": "MIT"
+}

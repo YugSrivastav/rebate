@@ -1,0 +1,1730 @@
+{
+  "users": [
+    {
+      "id": "usr_dev_1",
+      "email": "alex.chen@dev.io",
+      "name": "Alex Chen",
+      "role": "developer",
+      "createdAt": "2026-08-01T10:00:00Z"
+    },
+    {
+      "id": "usr_dev_2",
+      "email": "priya.sharma@tech.in",
+      "name": "Priya Sharma",
+      "role": "developer",
+      "createdAt": "2026-08-05T12:00:00Z"
+    },
+    {
+      "id": "usr_dev_3",
+      "email": "marcus.vance@systems.io",
+      "name": "Marcus Vance",
+      "role": "developer",
+      "createdAt": "2026-08-10T09:30:00Z"
+    },
+    {
+      "id": "usr_adv_1",
+      "email": "sponsor@example-ai.dev",
+      "name": "Elena Rostova",
+      "role": "advertiser",
+      "createdAt": "2026-07-15T08:00:00Z"
+    },
+    {
+      "id": "usr_adv_2",
+      "email": "growth@cloudx.io",
+      "name": "David Miller",
+      "role": "advertiser",
+      "createdAt": "2026-07-20T11:00:00Z"
+    },
+    {
+      "id": "usr_1788517986347",
+      "email": "rohit.verma@example.com",
+      "name": "Rohit Verma",
+      "role": "developer",
+      "createdAt": "2026-09-04T10:33:06.347Z"
+    },
+    {
+      "id": "usr_1788518451587",
+      "email": "rohit.verma@example.com",
+      "name": "Rohit Verma",
+      "role": "developer",
+      "createdAt": "2026-09-04T10:40:51.587Z"
+    }
+  ],
+  "developerProfiles": [
+    {
+      "id": "dev_alex_india",
+      "userId": "usr_dev_2",
+      "name": "Priya Sharma (Demo)",
+      "email": "priya.sharma@tech.in",
+      "role": "Student",
+      "field": "AI/ML",
+      "skills": [
+        "Python",
+        "FastAPI",
+        "PyTorch",
+        "React",
+        "Docker",
+        "Machine Learning"
+      ],
+      "education": "Student",
+      "location": {
+        "country": "India",
+        "state": "Karnataka",
+        "city": "Bengaluru"
+      },
+      "rewardPreference": "USD",
+      "preferredCategories": [
+        "internship",
+        "hackathon",
+        "cloud_credits"
+      ],
+      "connectedAgents": [
+        "antigravity",
+        "claude_code",
+        "demo"
+      ],
+      "accountStatus": "active",
+      "createdAt": "2026-08-05T12:00:00Z",
+      "updatedAt": "2026-09-04T10:09:42.520Z"
+    },
+    {
+      "id": "dev_alex_chen",
+      "userId": "usr_dev_1",
+      "name": "Alex Chen",
+      "email": "alex.chen@dev.io",
+      "role": "Professional Engineer",
+      "field": "Web Development",
+      "skills": [
+        "TypeScript",
+        "React",
+        "Next.js",
+        "Node.js",
+        "PostgreSQL",
+        "GraphQL"
+      ],
+      "education": "Graduate",
+      "location": {
+        "country": "United States",
+        "state": "California",
+        "city": "San Francisco"
+      },
+      "rewardPreference": "USD",
+      "preferredCategories": [
+        "dev_tool",
+        "api_credits",
+        "job"
+      ],
+      "connectedAgents": [
+        "claude_code",
+        "codex"
+      ],
+      "accountStatus": "active",
+      "createdAt": "2026-08-01T10:00:00Z",
+      "updatedAt": "2026-08-01T10:00:00Z"
+    },
+    {
+      "id": "dev_marcus_vance",
+      "userId": "usr_dev_3",
+      "name": "Marcus Vance",
+      "email": "marcus.vance@systems.io",
+      "role": "Professional Engineer",
+      "field": "Cloud/DevOps",
+      "skills": [
+        "Rust",
+        "Go",
+        "Kubernetes",
+        "Docker",
+        "AWS",
+        "GCP"
+      ],
+      "education": "Working professional",
+      "location": {
+        "country": "Germany",
+        "state": "Berlin",
+        "city": "Berlin"
+      },
+      "rewardPreference": "CLOUD_CREDITS",
+      "preferredCategories": [
+        "cloud_credits",
+        "dev_tool",
+        "job"
+      ],
+      "connectedAgents": [
+        "opencode",
+        "codex"
+      ],
+      "accountStatus": "active",
+      "createdAt": "2026-08-10T09:30:00Z",
+      "updatedAt": "2026-08-10T09:30:00Z"
+    },
+    {
+      "id": "dev_sara_lee",
+      "userId": "usr_dev_4",
+      "name": "Sara Lee",
+      "email": "sara@ai-research.org",
+      "role": "Researcher",
+      "field": "AI/ML",
+      "skills": [
+        "Python",
+        "PyTorch",
+        "TensorFlow",
+        "C++",
+        "FastAPI"
+      ],
+      "education": "Researcher",
+      "location": {
+        "country": "Canada",
+        "state": "Ontario",
+        "city": "Toronto"
+      },
+      "rewardPreference": "AI_CREDITS",
+      "preferredCategories": [
+        "api_credits",
+        "grant",
+        "job"
+      ],
+      "connectedAgents": [
+        "antigravity"
+      ],
+      "accountStatus": "active",
+      "createdAt": "2026-08-12T14:00:00Z",
+      "updatedAt": "2026-08-12T14:00:00Z"
+    },
+    {
+      "id": "dev_rohit_verma",
+      "userId": "usr_dev_5",
+      "name": "Rohit Verma",
+      "email": "rohit.v@codecraft.in",
+      "role": "Freelancer",
+      "field": "Mobile Development",
+      "skills": [
+        "Flutter",
+        "React",
+        "TypeScript",
+        "Node.js",
+        "MongoDB"
+      ],
+      "education": "Graduate",
+      "location": {
+        "country": "India",
+        "state": "Maharashtra",
+        "city": "Mumbai"
+      },
+      "rewardPreference": "INR",
+      "preferredCategories": [
+        "dev_tool",
+        "hackathon"
+      ],
+      "connectedAgents": [
+        "demo"
+      ],
+      "accountStatus": "active",
+      "createdAt": "2026-08-14T11:00:00Z",
+      "updatedAt": "2026-08-14T11:00:00Z"
+    },
+    {
+      "id": "dev_elena_gomez",
+      "userId": "usr_dev_6",
+      "name": "Elena Gomez",
+      "email": "elena@founder.co",
+      "role": "Founder",
+      "field": "AI/ML",
+      "skills": [
+        "Python",
+        "Next.js",
+        "FastAPI",
+        "PostgreSQL",
+        "AWS"
+      ],
+      "education": "Founder",
+      "location": {
+        "country": "Spain",
+        "state": "Madrid",
+        "city": "Madrid"
+      },
+      "rewardPreference": "API_CREDITS",
+      "preferredCategories": [
+        "cloud_credits",
+        "api_credits",
+        "grant"
+      ],
+      "connectedAgents": [
+        "claude_code"
+      ],
+      "accountStatus": "active",
+      "createdAt": "2026-08-15T15:20:00Z",
+      "updatedAt": "2026-08-15T15:20:00Z"
+    },
+    {
+      "id": "dev_anon_student",
+      "userId": "usr_dev_7",
+      "name": "Anonymous Hacker",
+      "email": "anon@student.edu",
+      "role": "Student",
+      "field": "Cybersecurity",
+      "skills": [
+        "Python",
+        "C",
+        "C++",
+        "Rust",
+        "Linux"
+      ],
+      "education": "Student",
+      "rewardPreference": "AI_CREDITS",
+      "preferredCategories": [
+        "hackathon",
+        "job"
+      ],
+      "connectedAgents": [
+        "demo"
+      ],
+      "accountStatus": "active",
+      "createdAt": "2026-08-18T16:00:00Z",
+      "updatedAt": "2026-08-18T16:00:00Z"
+    },
+    {
+      "id": "dev_kenji_sato",
+      "userId": "usr_dev_8",
+      "name": "Kenji Sato",
+      "email": "kenji@tokyo-dev.jp",
+      "role": "Developer",
+      "field": "Blockchain/Web3",
+      "skills": [
+        "Solidity",
+        "Rust",
+        "TypeScript",
+        "React",
+        "Go"
+      ],
+      "education": "Working professional",
+      "location": {
+        "country": "Japan",
+        "state": "Tokyo",
+        "city": "Tokyo"
+      },
+      "rewardPreference": "USD",
+      "preferredCategories": [
+        "grant",
+        "dev_tool",
+        "job"
+      ],
+      "connectedAgents": [
+        "opencode"
+      ],
+      "accountStatus": "active",
+      "createdAt": "2026-08-19T08:10:00Z",
+      "updatedAt": "2026-08-19T08:10:00Z"
+    },
+    {
+      "id": "dev_charlie_kim",
+      "userId": "usr_dev_9",
+      "name": "Charlie Kim",
+      "email": "charlie@embedded-labs.io",
+      "role": "Developer",
+      "field": "Embedded/IoT",
+      "skills": [
+        "C",
+        "C++",
+        "Rust",
+        "Python"
+      ],
+      "education": "Graduate",
+      "location": {
+        "country": "South Korea",
+        "state": "Seoul",
+        "city": "Seoul"
+      },
+      "rewardPreference": "USD",
+      "preferredCategories": [
+        "job",
+        "dev_tool"
+      ],
+      "connectedAgents": [
+        "demo"
+      ],
+      "accountStatus": "active",
+      "createdAt": "2026-08-20T10:45:00Z",
+      "updatedAt": "2026-08-20T10:45:00Z"
+    },
+    {
+      "id": "dev_amara_diallo",
+      "userId": "usr_dev_10",
+      "name": "Amara Diallo",
+      "email": "amara@dataworks.org",
+      "role": "Professional Engineer",
+      "field": "Data",
+      "skills": [
+        "Python",
+        "PostgreSQL",
+        "FastAPI",
+        "Docker",
+        "Django"
+      ],
+      "education": "Working professional",
+      "location": {
+        "country": "France",
+        "state": "Ile-de-France",
+        "city": "Paris"
+      },
+      "rewardPreference": "CLOUD_CREDITS",
+      "preferredCategories": [
+        "cloud_credits",
+        "job"
+      ],
+      "connectedAgents": [
+        "claude_code"
+      ],
+      "accountStatus": "active",
+      "createdAt": "2026-08-22T13:15:00Z",
+      "updatedAt": "2026-08-22T13:15:00Z"
+    },
+    {
+      "id": "dev_1788517986349",
+      "userId": "usr_1788517986347",
+      "name": "Rohit Verma",
+      "email": "rohit.verma@example.com",
+      "role": "Backend Engineer",
+      "field": "Distributed Systems",
+      "skills": [
+        "Go",
+        "Kubernetes"
+      ],
+      "education": "Working Professional",
+      "location": {
+        "country": "India",
+        "state": "Maharashtra"
+      },
+      "rewardPreference": "INR",
+      "preferredCategories": [
+        "internship",
+        "job",
+        "cloud_credits"
+      ],
+      "connectedAgents": [
+        "antigravity",
+        "claude_code"
+      ],
+      "accountStatus": "active",
+      "createdAt": "2026-09-04T10:33:06.349Z",
+      "updatedAt": "2026-09-04T10:33:06.349Z"
+    },
+    {
+      "id": "dev_1788518451590",
+      "userId": "usr_1788518451587",
+      "name": "Rohit Verma",
+      "email": "rohit.verma@example.com",
+      "role": "Student",
+      "field": "AI/ML",
+      "skills": [
+        "Python",
+        "FastAPI",
+        "PyTorch"
+      ],
+      "education": "Student",
+      "location": {
+        "country": "India",
+        "state": "Karnataka"
+      },
+      "rewardPreference": "INR",
+      "preferredCategories": [
+        "internship",
+        "job",
+        "cloud_credits"
+      ],
+      "connectedAgents": [
+        "antigravity",
+        "claude_code"
+      ],
+      "accountStatus": "active",
+      "createdAt": "2026-09-04T10:40:51.590Z",
+      "updatedAt": "2026-09-04T10:40:51.590Z"
+    }
+  ],
+  "advertisers": [
+    {
+      "id": "adv_example_ai",
+      "userId": "usr_adv_1",
+      "companyName": "Example AI",
+      "website": "https://example-ai.dev",
+      "logoUrl": "/logos/example-ai.svg",
+      "verified": true,
+      "demoBalance": 35000,
+      "totalSpent": 4200,
+      "createdAt": "2026-07-15T08:00:00Z"
+    },
+    {
+      "id": "adv_cloudx",
+      "userId": "usr_adv_2",
+      "companyName": "CloudX Technologies",
+      "website": "https://cloudx.io",
+      "logoUrl": "/logos/cloudx.svg",
+      "verified": true,
+      "demoBalance": 50000,
+      "totalSpent": 11400,
+      "createdAt": "2026-07-20T11:00:00Z"
+    },
+    {
+      "id": "adv_nova_api",
+      "userId": "usr_adv_3",
+      "companyName": "Nova Intelligence",
+      "website": "https://nova-api.dev",
+      "logoUrl": "/logos/nova.svg",
+      "verified": true,
+      "demoBalance": 30000,
+      "totalSpent": 6200,
+      "createdAt": "2026-07-25T09:00:00Z"
+    },
+    {
+      "id": "adv_codebuild",
+      "userId": "usr_adv_4",
+      "companyName": "CodeBuild Foundation",
+      "website": "https://codebuild.global",
+      "logoUrl": "/logos/codebuild.svg",
+      "verified": true,
+      "demoBalance": 15000,
+      "totalSpent": 3500,
+      "createdAt": "2026-07-28T14:00:00Z"
+    }
+  ],
+  "campaigns": [
+    {
+      "id": "camp_ai_internship",
+      "advertiserId": "adv_example_ai",
+      "companyName": "Example AI",
+      "title": "AI Engineering Internship",
+      "opportunityType": "internship",
+      "description": "Join Example AI to build frontier autonomous agents and distributed evaluation frameworks. Remote or hybrid Bangalore.",
+      "requirements": [
+        "Hands-on experience with Python and modern deep learning frameworks (PyTorch)",
+        "Understanding of LLM agents, prompt chaining, or FastAPI backends",
+        "Available for 4-6 months full-time or part-time internship"
+      ],
+      "skills": [
+        "Python",
+        "FastAPI",
+        "PyTorch",
+        "Machine Learning"
+      ],
+      "destinationUrl": "https://example-ai.dev/careers/internship-2026",
+      "cta": "Apply",
+      "target": {
+        "roles": [
+          "Student",
+          "Intern"
+        ],
+        "fields": [
+          "AI/ML"
+        ],
+        "skills": [
+          "Python",
+          "FastAPI",
+          "Machine Learning"
+        ],
+        "education": [
+          "Student",
+          "Graduate"
+        ],
+        "countries": [
+          "India"
+        ],
+        "allowUnspecifiedLocation": false
+      },
+      "budget": 5000,
+      "remainingBudget": 4895,
+      "bidCpm": 7,
+      "campaignQuality": 1,
+      "billingModel": "cpm_impression",
+      "status": "active",
+      "impressionsCount": 15,
+      "verifiedImpressionsCount": 15,
+      "clicksCount": 3,
+      "totalSpend": 105,
+      "createdAt": "2026-08-10T10:00:00Z",
+      "updatedAt": "2026-09-04T11:45:35.786Z"
+    },
+    {
+      "id": "camp_cloudx_credits",
+      "advertiserId": "adv_cloudx",
+      "companyName": "CloudX",
+      "title": "Ship faster with CloudX",
+      "opportunityType": "cloud_credits",
+      "description": "Get $500 in zero-latency GPU and serverless cloud credits. Deploy containerized agents with one CLI command.",
+      "requirements": [
+        "Active developer building AI or containerized workloads",
+        "Deploy any Dockerfile or Node/Python web app"
+      ],
+      "skills": [
+        "Python",
+        "Docker",
+        "AWS"
+      ],
+      "destinationUrl": "https://cloudx.io/developers/rebate-credits",
+      "cta": "Claim $500 Credits",
+      "target": {
+        "skills": [
+          "Python",
+          "Docker",
+          "AWS"
+        ],
+        "allowUnspecifiedLocation": true
+      },
+      "budget": 10000,
+      "remainingBudget": 9680,
+      "bidCpm": 5,
+      "campaignQuality": 1,
+      "billingModel": "cpm_impression",
+      "status": "active",
+      "impressionsCount": 64,
+      "verifiedImpressionsCount": 64,
+      "clicksCount": 18,
+      "totalSpend": 320,
+      "createdAt": "2026-08-01T09:00:00Z",
+      "updatedAt": "2026-08-01T09:00:00Z"
+    },
+    {
+      "id": "camp_codebuild_hackathon",
+      "advertiserId": "adv_codebuild",
+      "companyName": "CodeBuild Global",
+      "title": "CodeBuild 2026 Hackathon",
+      "opportunityType": "hackathon",
+      "description": "Compete for $50,000 in prizes. Build real-time collaborative and autonomous agent tools.",
+      "requirements": [
+        "Open to all student and professional builders worldwide",
+        "Teams of 1-4 builders"
+      ],
+      "skills": [
+        "Python",
+        "React",
+        "TypeScript"
+      ],
+      "destinationUrl": "https://codebuild.global/hack-2026",
+      "cta": "Register Free",
+      "target": {
+        "roles": [
+          "Student",
+          "Developer"
+        ],
+        "countries": [
+          "India",
+          "United States",
+          "Global"
+        ],
+        "allowUnspecifiedLocation": true
+      },
+      "budget": 8000,
+      "remainingBudget": 7820,
+      "bidCpm": 6,
+      "campaignQuality": 1,
+      "billingModel": "cpm_impression",
+      "status": "active",
+      "impressionsCount": 30,
+      "verifiedImpressionsCount": 30,
+      "clicksCount": 9,
+      "totalSpend": 180,
+      "createdAt": "2026-08-12T11:00:00Z",
+      "updatedAt": "2026-08-12T11:00:00Z"
+    },
+    {
+      "id": "camp_nova_api",
+      "advertiserId": "adv_nova_api",
+      "companyName": "Nova Intelligence",
+      "title": "Build with Nova API — 10M Free Tokens",
+      "opportunityType": "api_credits",
+      "description": "Supercharge your coding agent with Nova-3 Flash. Blazing 180 tokens/second with structured function calling.",
+      "requirements": [
+        "Sign up with GitHub and generate your API key in seconds."
+      ],
+      "skills": [
+        "Python",
+        "TypeScript",
+        "Node.js",
+        "FastAPI"
+      ],
+      "destinationUrl": "https://nova-api.dev/playground",
+      "cta": "Explore",
+      "target": {
+        "fields": [
+          "AI/ML",
+          "Web Development"
+        ],
+        "skills": [
+          "Python",
+          "TypeScript"
+        ],
+        "allowUnspecifiedLocation": true
+      },
+      "budget": 6000,
+      "remainingBudget": 5880,
+      "bidCpm": 5.5,
+      "campaignQuality": 1.1,
+      "billingModel": "cpm_impression",
+      "status": "active",
+      "impressionsCount": 24,
+      "verifiedImpressionsCount": 24,
+      "clicksCount": 7,
+      "totalSpend": 132,
+      "createdAt": "2026-08-14T10:00:00Z",
+      "updatedAt": "2026-08-14T10:00:00Z"
+    },
+    {
+      "id": "camp_fullstack_job",
+      "advertiserId": "adv_cloudx",
+      "companyName": "CloudX",
+      "title": "Senior Next.js & Systems Engineer ($160k-$210k)",
+      "opportunityType": "job",
+      "description": "Lead high-throughput frontend and edge rendering architectures. Full remote, competitive equity.",
+      "requirements": [
+        "5+ years experience with modern React, Next.js App Router, and TypeScript",
+        "Deep understanding of web performance, caching, and serverless edge runtimes"
+      ],
+      "skills": [
+        "TypeScript",
+        "React",
+        "Next.js",
+        "PostgreSQL"
+      ],
+      "destinationUrl": "https://cloudx.io/careers/senior-fullstack",
+      "cta": "View Role",
+      "target": {
+        "roles": [
+          "Developer",
+          "Professional Engineer"
+        ],
+        "fields": [
+          "Web Development"
+        ],
+        "skills": [
+          "TypeScript",
+          "Next.js"
+        ],
+        "countries": [
+          "United States",
+          "Canada",
+          "Germany"
+        ],
+        "allowUnspecifiedLocation": false
+      },
+      "budget": 12000,
+      "remainingBudget": 11640,
+      "bidCpm": 9,
+      "campaignQuality": 1.2,
+      "billingModel": "cpm_impression",
+      "status": "active",
+      "impressionsCount": 40,
+      "verifiedImpressionsCount": 40,
+      "clicksCount": 12,
+      "totalSpend": 360,
+      "createdAt": "2026-08-15T12:00:00Z",
+      "updatedAt": "2026-08-15T12:00:00Z"
+    },
+    {
+      "id": "camp_rust_job",
+      "advertiserId": "adv_example_ai",
+      "companyName": "Example AI",
+      "title": "Systems Engineer — High Performance Rust",
+      "opportunityType": "job",
+      "description": "Build sub-millisecond tensor serialization and distributed inference runtimes in Rust.",
+      "requirements": [
+        "3+ years production Rust or C++ experience",
+        "Familiarity with SIMD, memory mapping, and Linux socket tuning"
+      ],
+      "skills": [
+        "Rust",
+        "C++",
+        "Linux",
+        "Docker"
+      ],
+      "destinationUrl": "https://example-ai.dev/careers/rust-engineer",
+      "cta": "Apply",
+      "target": {
+        "fields": [
+          "Cloud/DevOps",
+          "Cybersecurity",
+          "AI/ML"
+        ],
+        "skills": [
+          "Rust",
+          "C++"
+        ],
+        "allowUnspecifiedLocation": true
+      },
+      "budget": 7500,
+      "remainingBudget": 7420,
+      "bidCpm": 8.5,
+      "campaignQuality": 1,
+      "billingModel": "cpm_impression",
+      "status": "active",
+      "impressionsCount": 10,
+      "verifiedImpressionsCount": 10,
+      "clicksCount": 2,
+      "totalSpend": 85,
+      "createdAt": "2026-08-16T14:00:00Z",
+      "updatedAt": "2026-08-16T14:00:00Z"
+    },
+    {
+      "id": "camp_turbotrace_tool",
+      "advertiserId": "adv_cloudx",
+      "companyName": "TurboTrace",
+      "title": "Instant Distributed Tracing for AI Agents",
+      "opportunityType": "dev_tool",
+      "description": "One-line telemetry for LLM tool loops and multi-agent execution traces. Free forever for individuals.",
+      "requirements": [
+        "Install via npm or pip and visualize local execution DAGs."
+      ],
+      "skills": [
+        "Python",
+        "TypeScript",
+        "Node.js",
+        "Go"
+      ],
+      "destinationUrl": "https://turbotrace.dev",
+      "cta": "Try CLI",
+      "target": {
+        "skills": [
+          "Python",
+          "TypeScript",
+          "Go"
+        ],
+        "allowUnspecifiedLocation": true
+      },
+      "budget": 4500,
+      "remainingBudget": 4410,
+      "bidCpm": 4.5,
+      "campaignQuality": 1,
+      "billingModel": "cpm_impression",
+      "status": "active",
+      "impressionsCount": 20,
+      "verifiedImpressionsCount": 20,
+      "clicksCount": 5,
+      "totalSpend": 90,
+      "createdAt": "2026-08-18T10:00:00Z",
+      "updatedAt": "2026-08-18T10:00:00Z"
+    },
+    {
+      "id": "camp_oss_grant",
+      "advertiserId": "adv_codebuild",
+      "companyName": "Open Web Collective",
+      "title": "Micro-Grants for Open Source AI Dev Tools ($2k-$10k)",
+      "opportunityType": "grant",
+      "description": "Equity-free micro-grants for developers building open developer tooling, compilers, and agents.",
+      "requirements": [
+        "Public GitHub repository with an active prototype or design spec."
+      ],
+      "skills": [
+        "Python",
+        "Rust",
+        "TypeScript",
+        "Go"
+      ],
+      "destinationUrl": "https://codebuild.global/grants",
+      "cta": "Apply for Grant",
+      "target": {
+        "roles": [
+          "Developer",
+          "Founder",
+          "Researcher",
+          "Freelancer"
+        ],
+        "allowUnspecifiedLocation": true
+      },
+      "budget": 15000,
+      "remainingBudget": 14820,
+      "bidCpm": 6,
+      "campaignQuality": 1.2,
+      "billingModel": "cpm_impression",
+      "status": "active",
+      "impressionsCount": 30,
+      "verifiedImpressionsCount": 30,
+      "clicksCount": 11,
+      "totalSpend": 180,
+      "createdAt": "2026-08-19T09:00:00Z",
+      "updatedAt": "2026-08-19T09:00:00Z"
+    },
+    {
+      "id": "camp_mobile_fellowship",
+      "advertiserId": "adv_example_ai",
+      "companyName": "EdgeIntelligence",
+      "title": "On-Device LLM & Mobile Fellowship",
+      "opportunityType": "internship",
+      "description": "Research quantization, NPU acceleration, and local model inference on mobile chips.",
+      "requirements": [
+        "Experience with Flutter, Swift, or PyTorch Mobile/ONNX."
+      ],
+      "skills": [
+        "Flutter",
+        "Swift",
+        "Python",
+        "C++"
+      ],
+      "destinationUrl": "https://example-ai.dev/fellowship",
+      "cta": "Apply",
+      "target": {
+        "roles": [
+          "Student",
+          "Intern",
+          "Researcher"
+        ],
+        "fields": [
+          "Mobile Development",
+          "AI/ML"
+        ],
+        "skills": [
+          "Flutter",
+          "Swift"
+        ],
+        "allowUnspecifiedLocation": true
+      },
+      "budget": 3500,
+      "remainingBudget": 3500,
+      "bidCpm": 5,
+      "campaignQuality": 1,
+      "billingModel": "cpm_impression",
+      "status": "active",
+      "impressionsCount": 0,
+      "verifiedImpressionsCount": 0,
+      "clicksCount": 0,
+      "totalSpend": 0,
+      "createdAt": "2026-08-20T11:00:00Z",
+      "updatedAt": "2026-08-20T11:00:00Z"
+    },
+    {
+      "id": "camp_web3_bounty",
+      "advertiserId": "adv_codebuild",
+      "companyName": "SecureNet",
+      "title": "Smart Contract Audit Bounty — $30,000 Pool",
+      "opportunityType": "hackathon",
+      "description": "Find invariants, reentrancy vulnerabilities, and logic flaws in decentralized credit protocols.",
+      "requirements": [
+        "Familiarity with Solidity, Rust, and static analyzers."
+      ],
+      "skills": [
+        "Solidity",
+        "Rust"
+      ],
+      "destinationUrl": "https://securenet.io/bounties",
+      "cta": "Audit & Win",
+      "target": {
+        "fields": [
+          "Cybersecurity",
+          "Blockchain/Web3"
+        ],
+        "skills": [
+          "Solidity",
+          "Rust"
+        ],
+        "allowUnspecifiedLocation": true
+      },
+      "budget": 5000,
+      "remainingBudget": 4940,
+      "bidCpm": 6,
+      "campaignQuality": 1,
+      "billingModel": "cpm_impression",
+      "status": "active",
+      "impressionsCount": 10,
+      "verifiedImpressionsCount": 10,
+      "clicksCount": 4,
+      "totalSpend": 60,
+      "createdAt": "2026-08-21T10:00:00Z",
+      "updatedAt": "2026-08-21T10:00:00Z"
+    },
+    {
+      "id": "camp_k8s_env",
+      "advertiserId": "adv_cloudx",
+      "companyName": "KubeSpeed",
+      "title": "Instant Ephemeral K8s Clusters for Pull Requests",
+      "opportunityType": "dev_tool",
+      "description": "Spin up full staging environments in 15 seconds per PR. Connect your GitHub in 2 minutes.",
+      "requirements": [
+        "Works with any Docker / Helm based stack."
+      ],
+      "skills": [
+        "Kubernetes",
+        "Docker",
+        "Go",
+        "AWS"
+      ],
+      "destinationUrl": "https://kubespeed.io",
+      "cta": "Start Free Tier",
+      "target": {
+        "fields": [
+          "Cloud/DevOps"
+        ],
+        "skills": [
+          "Kubernetes",
+          "Docker"
+        ],
+        "allowUnspecifiedLocation": true
+      },
+      "budget": 4000,
+      "remainingBudget": 3910,
+      "bidCpm": 4.5,
+      "campaignQuality": 1,
+      "billingModel": "cpm_impression",
+      "status": "active",
+      "impressionsCount": 20,
+      "verifiedImpressionsCount": 20,
+      "clicksCount": 3,
+      "totalSpend": 90,
+      "createdAt": "2026-08-22T08:00:00Z",
+      "updatedAt": "2026-08-22T08:00:00Z"
+    },
+    {
+      "id": "camp_media_api",
+      "advertiserId": "adv_nova_api",
+      "companyName": "PixelSynthetics",
+      "title": "Ultra-fast Video & Vector Gen API ($100 Credits)",
+      "opportunityType": "api_credits",
+      "description": "Programmatically generate video sprites, SVG layouts, and voice dubs via REST endpoints.",
+      "requirements": [
+        "Simple API key access, SDKs for Python and TypeScript."
+      ],
+      "skills": [
+        "Python",
+        "TypeScript",
+        "FastAPI"
+      ],
+      "destinationUrl": "https://pixelsynthetics.dev",
+      "cta": "Claim $100",
+      "target": {
+        "fields": [
+          "Web Development",
+          "AI/ML",
+          "Game Development"
+        ],
+        "skills": [
+          "TypeScript",
+          "Python"
+        ],
+        "allowUnspecifiedLocation": true
+      },
+      "budget": 5000,
+      "remainingBudget": 4850,
+      "bidCpm": 5,
+      "campaignQuality": 1,
+      "billingModel": "cpm_impression",
+      "status": "active",
+      "impressionsCount": 30,
+      "verifiedImpressionsCount": 30,
+      "clicksCount": 6,
+      "totalSpend": 150,
+      "createdAt": "2026-08-23T11:00:00Z",
+      "updatedAt": "2026-08-23T11:00:00Z"
+    },
+    {
+      "id": "camp_data_job",
+      "advertiserId": "adv_cloudx",
+      "companyName": "DataSphere",
+      "title": "Principal Data Infrastructure Architect",
+      "opportunityType": "job",
+      "description": "Architect multi-terabyte stream processing engines using Kafka, ClickHouse, and Python/Go.",
+      "requirements": [
+        "6+ years designing distributed real-time pipelines."
+      ],
+      "skills": [
+        "PostgreSQL",
+        "Python",
+        "Go",
+        "Docker"
+      ],
+      "destinationUrl": "https://datasphere.io/careers/lead",
+      "cta": "Apply",
+      "target": {
+        "roles": [
+          "Professional Engineer",
+          "Developer"
+        ],
+        "fields": [
+          "Data",
+          "Cloud/DevOps"
+        ],
+        "skills": [
+          "PostgreSQL",
+          "Python"
+        ],
+        "countries": [
+          "United States",
+          "Germany",
+          "France"
+        ],
+        "allowUnspecifiedLocation": false
+      },
+      "budget": 9000,
+      "remainingBudget": 9000,
+      "bidCpm": 8,
+      "campaignQuality": 1,
+      "billingModel": "cpm_impression",
+      "status": "active",
+      "impressionsCount": 0,
+      "verifiedImpressionsCount": 0,
+      "clicksCount": 0,
+      "totalSpend": 0,
+      "createdAt": "2026-08-24T12:00:00Z",
+      "updatedAt": "2026-08-24T12:00:00Z"
+    },
+    {
+      "id": "camp_embedded_residency",
+      "advertiserId": "adv_codebuild",
+      "companyName": "SiliconWeave Labs",
+      "title": "RISC-V Firmware & Compiler Residency",
+      "opportunityType": "internship",
+      "description": "Paid 3-month residency working on open silicon architectures, custom ISA extensions, and LLVM backends.",
+      "requirements": [
+        "Fluency in C, C++, and low-level computer architecture."
+      ],
+      "skills": [
+        "C",
+        "C++",
+        "Rust"
+      ],
+      "destinationUrl": "https://siliconweave.dev/residency",
+      "cta": "Apply",
+      "target": {
+        "roles": [
+          "Student",
+          "Researcher",
+          "Developer"
+        ],
+        "fields": [
+          "Embedded/IoT",
+          "Hardware"
+        ],
+        "skills": [
+          "C",
+          "C++"
+        ],
+        "allowUnspecifiedLocation": true
+      },
+      "budget": 6000,
+      "remainingBudget": 6000,
+      "bidCpm": 6,
+      "campaignQuality": 1,
+      "billingModel": "cpm_impression",
+      "status": "active",
+      "impressionsCount": 0,
+      "verifiedImpressionsCount": 0,
+      "clicksCount": 0,
+      "totalSpend": 0,
+      "createdAt": "2026-08-25T13:00:00Z",
+      "updatedAt": "2026-08-25T13:00:00Z"
+    },
+    {
+      "id": "camp_devrel_job",
+      "advertiserId": "adv_example_ai",
+      "companyName": "Example AI",
+      "title": "Founding Developer Advocate — Agent Tooling",
+      "opportunityType": "job",
+      "description": "Create tutorials, open source demo agent apps, and empower thousands of developers using our runtime.",
+      "requirements": [
+        "Strong technical writing, GitHub open-source presence, and coding skills."
+      ],
+      "skills": [
+        "Python",
+        "TypeScript",
+        "React",
+        "FastAPI"
+      ],
+      "destinationUrl": "https://example-ai.dev/careers/devrel",
+      "cta": "Apply",
+      "target": {
+        "roles": [
+          "Developer",
+          "Freelancer",
+          "Professional Engineer"
+        ],
+        "fields": [
+          "AI/ML",
+          "Web Development"
+        ],
+        "skills": [
+          "Python",
+          "TypeScript"
+        ],
+        "allowUnspecifiedLocation": true
+      },
+      "budget": 8000,
+      "remainingBudget": 8000,
+      "bidCpm": 7.5,
+      "campaignQuality": 1.1,
+      "billingModel": "cpm_impression",
+      "status": "active",
+      "impressionsCount": 0,
+      "verifiedImpressionsCount": 0,
+      "clicksCount": 0,
+      "totalSpend": 0,
+      "createdAt": "2026-08-26T14:00:00Z",
+      "updatedAt": "2026-08-26T14:00:00Z"
+    }
+  ],
+  "opportunities": [
+    {
+      "id": "opp_ai_internship",
+      "campaignId": "camp_ai_internship",
+      "title": "AI Engineering Internship",
+      "company": "Example AI",
+      "opportunityType": "internship",
+      "location": "Bengaluru, India / Hybrid",
+      "description": "Join Example AI to build frontier autonomous agents and distributed evaluation frameworks. Work directly alongside founding research engineers.",
+      "requirements": [
+        "Hands-on experience with Python and modern deep learning frameworks (PyTorch)",
+        "Understanding of LLM agents, prompt chaining, or FastAPI backends",
+        "Available for 4-6 months full-time or part-time internship"
+      ],
+      "skills": [
+        "Python",
+        "FastAPI",
+        "PyTorch",
+        "Machine Learning"
+      ],
+      "destinationUrl": "https://example-ai.dev/careers/internship-2026",
+      "cta": "Apply",
+      "logoUrl": "/logos/example-ai.svg",
+      "sponsoredLabel": "Sponsored Opportunity",
+      "matchReason": {
+        "skills": [
+          "Python",
+          "FastAPI",
+          "PyTorch"
+        ],
+        "role": "Student",
+        "field": "AI/ML",
+        "location": "India"
+      }
+    },
+    {
+      "id": "opp_cloudx_credits",
+      "campaignId": "camp_cloudx_credits",
+      "title": "Ship faster with CloudX",
+      "company": "CloudX",
+      "opportunityType": "cloud_credits",
+      "location": "Global / Remote",
+      "description": "Get $500 in zero-latency GPU and serverless cloud credits. Deploy containerized agents with one CLI command.",
+      "requirements": [
+        "Active developer building AI or containerized workloads",
+        "Deploy any Dockerfile or Node/Python web app"
+      ],
+      "skills": [
+        "Python",
+        "Docker",
+        "AWS"
+      ],
+      "destinationUrl": "https://cloudx.io/developers/rebate-credits",
+      "cta": "Claim $500 Credits",
+      "logoUrl": "/logos/cloudx.svg",
+      "sponsoredLabel": "Sponsored Opportunity",
+      "matchReason": {
+        "skills": [
+          "Python",
+          "Docker"
+        ],
+        "location": "Global"
+      }
+    },
+    {
+      "id": "opp_codebuild_hackathon",
+      "campaignId": "camp_codebuild_hackathon",
+      "title": "CodeBuild 2026 Hackathon",
+      "company": "CodeBuild Global",
+      "opportunityType": "hackathon",
+      "location": "Online / Global",
+      "description": "Compete for $50,000 in prizes. Build real-time collaborative and autonomous agent tools.",
+      "requirements": [
+        "Open to all student and professional builders worldwide",
+        "Teams of 1-4 builders"
+      ],
+      "skills": [
+        "Python",
+        "React",
+        "TypeScript"
+      ],
+      "destinationUrl": "https://codebuild.global/hack-2026",
+      "cta": "Register Free",
+      "logoUrl": "/logos/codebuild.svg",
+      "sponsoredLabel": "Sponsored Opportunity",
+      "matchReason": {
+        "skills": [
+          "Python",
+          "React"
+        ],
+        "role": "Student"
+      }
+    },
+    {
+      "id": "opp_nova_api",
+      "campaignId": "camp_nova_api",
+      "title": "Build with Nova API — 10M Free Tokens",
+      "company": "Nova Intelligence",
+      "opportunityType": "api_credits",
+      "location": "Global / Remote",
+      "description": "Supercharge your coding agent with Nova-3 Flash. Blazing 180 tokens/second with structured function calling.",
+      "requirements": [
+        "Sign up with GitHub and generate your API key in seconds."
+      ],
+      "skills": [
+        "Python",
+        "TypeScript",
+        "FastAPI"
+      ],
+      "destinationUrl": "https://nova-api.dev/playground",
+      "cta": "Explore",
+      "logoUrl": "/logos/nova.svg",
+      "sponsoredLabel": "Sponsored Opportunity",
+      "matchReason": {
+        "skills": [
+          "Python",
+          "TypeScript"
+        ],
+        "field": "AI/ML"
+      }
+    },
+    {
+      "id": "opp_fullstack_job",
+      "campaignId": "camp_fullstack_job",
+      "title": "Senior Next.js & Systems Engineer ($160k-$210k)",
+      "company": "CloudX",
+      "opportunityType": "job",
+      "location": "San Francisco, CA / Remote",
+      "description": "Lead high-throughput frontend and edge rendering architectures. Full remote, competitive equity.",
+      "requirements": [
+        "5+ years experience with modern React, Next.js App Router, and TypeScript",
+        "Deep understanding of web performance, caching, and serverless edge runtimes"
+      ],
+      "skills": [
+        "TypeScript",
+        "React",
+        "Next.js",
+        "PostgreSQL"
+      ],
+      "destinationUrl": "https://cloudx.io/careers/senior-fullstack",
+      "cta": "View Role",
+      "logoUrl": "/logos/cloudx.svg",
+      "sponsoredLabel": "Sponsored Opportunity",
+      "matchReason": {
+        "skills": [
+          "TypeScript",
+          "Next.js"
+        ],
+        "role": "Professional Engineer",
+        "field": "Web Development"
+      }
+    },
+    {
+      "id": "opp_rust_job",
+      "campaignId": "camp_rust_job",
+      "title": "Systems Engineer — High Performance Rust",
+      "company": "Example AI",
+      "opportunityType": "job",
+      "location": "Berlin, Germany / Hybrid",
+      "description": "Build sub-millisecond tensor serialization and distributed inference runtimes in Rust.",
+      "requirements": [
+        "3+ years production Rust or C++ experience",
+        "Familiarity with SIMD, memory mapping, and Linux socket tuning"
+      ],
+      "skills": [
+        "Rust",
+        "C++",
+        "Linux",
+        "Docker"
+      ],
+      "destinationUrl": "https://example-ai.dev/careers/rust-engineer",
+      "cta": "Apply",
+      "logoUrl": "/logos/example-ai.svg",
+      "sponsoredLabel": "Sponsored Opportunity",
+      "matchReason": {
+        "skills": [
+          "Rust",
+          "Docker"
+        ],
+        "field": "Cloud/DevOps"
+      }
+    },
+    {
+      "id": "opp_turbotrace_tool",
+      "campaignId": "camp_turbotrace_tool",
+      "title": "Instant Distributed Tracing for AI Agents",
+      "company": "TurboTrace",
+      "opportunityType": "dev_tool",
+      "location": "Global / Self-Hosted",
+      "description": "One-line telemetry for LLM tool loops and multi-agent execution traces. Free forever for individuals.",
+      "requirements": [
+        "Install via npm or pip and visualize local execution DAGs."
+      ],
+      "skills": [
+        "Python",
+        "TypeScript",
+        "Go"
+      ],
+      "destinationUrl": "https://turbotrace.dev",
+      "cta": "Try CLI",
+      "logoUrl": "/logos/turbotrace.svg",
+      "sponsoredLabel": "Sponsored Opportunity",
+      "matchReason": {
+        "skills": [
+          "Python",
+          "TypeScript"
+        ]
+      }
+    },
+    {
+      "id": "opp_oss_grant",
+      "campaignId": "camp_oss_grant",
+      "title": "Micro-Grants for Open Source AI Dev Tools ($2k-$10k)",
+      "company": "Open Web Collective",
+      "opportunityType": "grant",
+      "location": "Global",
+      "description": "Equity-free micro-grants for developers building open developer tooling, compilers, and agents.",
+      "requirements": [
+        "Public GitHub repository with an active prototype or design spec."
+      ],
+      "skills": [
+        "Python",
+        "Rust",
+        "TypeScript",
+        "Go"
+      ],
+      "destinationUrl": "https://codebuild.global/grants",
+      "cta": "Apply for Grant",
+      "logoUrl": "/logos/codebuild.svg",
+      "sponsoredLabel": "Sponsored Opportunity",
+      "matchReason": {
+        "skills": [
+          "Python",
+          "Rust"
+        ],
+        "role": "Developer"
+      }
+    }
+  ],
+  "agentSessions": [
+    {
+      "sessionId": "sess_antigravity_01",
+      "developerId": "dev_alex_india",
+      "agentType": "antigravity",
+      "status": "active",
+      "startedAt": "2026-09-04T09:09:21.055Z",
+      "lastHeartbeat": "2026-09-04T10:09:21.055Z",
+      "eventSequence": 4
+    },
+    {
+      "sessionId": "sess_claude_02",
+      "developerId": "dev_alex_india",
+      "agentType": "claude_code",
+      "status": "idle",
+      "startedAt": "2026-09-04T08:09:21.055Z",
+      "lastHeartbeat": "2026-09-04T09:39:21.055Z",
+      "eventSequence": 2
+    },
+    {
+      "sessionId": "sess_1788520786687_k7aq",
+      "developerId": "dev_alex_india",
+      "agentType": "demo",
+      "status": "waiting",
+      "startedAt": "2026-09-04T11:19:48.214Z",
+      "lastHeartbeat": "2026-09-04T11:19:48.215Z",
+      "eventSequence": 1
+    },
+    {
+      "sessionId": "sess_1788522096360_k64i",
+      "developerId": "dev_alex_india",
+      "agentType": "demo",
+      "status": "waiting",
+      "startedAt": "2026-09-04T11:41:37.568Z",
+      "lastHeartbeat": "2026-09-04T11:41:37.568Z",
+      "eventSequence": 1
+    },
+    {
+      "sessionId": "sess_antigravity_1788522200517",
+      "developerId": "dev_alex_india",
+      "agentType": "antigravity",
+      "status": "waiting",
+      "startedAt": "2026-09-04T11:43:20.571Z",
+      "lastHeartbeat": "2026-09-04T11:43:20.571Z",
+      "eventSequence": 1
+    },
+    {
+      "sessionId": "sess_antigravity_1788522327742",
+      "developerId": "dev_alex_india",
+      "agentType": "antigravity",
+      "status": "waiting",
+      "startedAt": "2026-09-04T11:45:27.791Z",
+      "lastHeartbeat": "2026-09-04T11:45:27.791Z",
+      "eventSequence": 1
+    },
+    {
+      "sessionId": "sess_agy_1788535245750",
+      "developerId": "dev_alex_india",
+      "agentType": "antigravity",
+      "status": "waiting",
+      "startedAt": "2026-09-04T15:20:45.986Z",
+      "lastHeartbeat": "2026-09-04T15:20:45.986Z",
+      "eventSequence": 1
+    }
+  ],
+  "impressions": [
+    {
+      "impressionId": "imp_seed_01",
+      "campaignId": "camp_ai_internship",
+      "developerId": "dev_alex_india",
+      "sessionId": "sess_antigravity_01",
+      "agentType": "antigravity",
+      "startedAt": "2026-09-04T10:32:00Z",
+      "endedAt": "2026-09-04T10:32:12Z",
+      "durationSeconds": 12,
+      "status": "verified",
+      "advertiserCost": 7,
+      "platformShare": 2.1,
+      "developerReward": 4.9,
+      "currency": "INR",
+      "createdAt": "2026-09-04T10:32:00Z"
+    },
+    {
+      "impressionId": "imp_seed_02",
+      "campaignId": "camp_cloudx_credits",
+      "developerId": "dev_alex_india",
+      "sessionId": "sess_antigravity_01",
+      "agentType": "antigravity",
+      "startedAt": "2026-09-04T10:26:00Z",
+      "endedAt": "2026-09-04T10:26:10Z",
+      "durationSeconds": 10,
+      "status": "verified",
+      "advertiserCost": 5,
+      "platformShare": 1.5,
+      "developerReward": 3.5,
+      "currency": "INR",
+      "createdAt": "2026-09-04T10:26:00Z"
+    },
+    {
+      "impressionId": "imp_1788520788217_rbtt0",
+      "campaignId": "camp_ai_internship",
+      "developerId": "dev_alex_india",
+      "sessionId": "sess_1788520786687_k7aq",
+      "agentType": "demo",
+      "startedAt": "2026-09-04T11:19:48.217Z",
+      "durationSeconds": 10,
+      "status": "rejected",
+      "advertiserCost": 7,
+      "platformShare": 2.1,
+      "developerReward": 0.06,
+      "currency": "USD",
+      "createdAt": "2026-09-04T11:19:48.217Z",
+      "endedAt": "2026-09-04T11:19:57.867Z",
+      "rejectionReason": "Replay detected: this impression has already been settled."
+    },
+    {
+      "impressionId": "imp_1788522097570_8u8zh",
+      "campaignId": "camp_ai_internship",
+      "developerId": "dev_alex_india",
+      "sessionId": "sess_1788522096360_k64i",
+      "agentType": "demo",
+      "startedAt": "2026-09-04T11:41:37.570Z",
+      "durationSeconds": 10,
+      "status": "rejected",
+      "advertiserCost": 7,
+      "platformShare": 2.1,
+      "developerReward": 0.06,
+      "currency": "USD",
+      "createdAt": "2026-09-04T11:41:37.570Z",
+      "endedAt": "2026-09-04T11:41:47.531Z",
+      "rejectionReason": "Replay detected: this impression has already been settled."
+    },
+    {
+      "impressionId": "imp_1788522200574_ysg76",
+      "campaignId": "camp_ai_internship",
+      "developerId": "dev_alex_india",
+      "sessionId": "sess_antigravity_1788522200517",
+      "agentType": "antigravity",
+      "startedAt": "2026-09-04T11:43:20.574Z",
+      "durationSeconds": 8,
+      "status": "verified",
+      "advertiserCost": 7,
+      "platformShare": 2.1,
+      "developerReward": 0.06,
+      "currency": "USD",
+      "createdAt": "2026-09-04T11:43:20.574Z",
+      "endedAt": "2026-09-04T11:43:28.544Z"
+    },
+    {
+      "impressionId": "imp_1788522327793_8lvg8",
+      "campaignId": "camp_ai_internship",
+      "developerId": "dev_alex_india",
+      "sessionId": "sess_antigravity_1788522327742",
+      "agentType": "antigravity",
+      "startedAt": "2026-09-04T11:45:27.793Z",
+      "durationSeconds": 8,
+      "status": "verified",
+      "advertiserCost": 7,
+      "platformShare": 2.1,
+      "developerReward": 0.06,
+      "currency": "USD",
+      "createdAt": "2026-09-04T11:45:27.793Z",
+      "endedAt": "2026-09-04T11:45:35.773Z"
+    },
+    {
+      "impressionId": "imp_1788535245988_ey6lo",
+      "campaignId": "camp_ai_internship",
+      "developerId": "dev_alex_india",
+      "sessionId": "sess_agy_1788535245750",
+      "agentType": "antigravity",
+      "startedAt": "2026-09-04T15:20:45.988Z",
+      "durationSeconds": 0,
+      "status": "pending",
+      "advertiserCost": 0,
+      "platformShare": 0,
+      "developerReward": 0,
+      "currency": "USD",
+      "createdAt": "2026-09-04T15:20:45.988Z"
+    }
+  ],
+  "clicks": [
+    {
+      "clickId": "clk_seed_01",
+      "impressionId": "imp_seed_01",
+      "campaignId": "camp_ai_internship",
+      "developerId": "dev_alex_india",
+      "destinationUrl": "https://example-ai.dev/careers/internship-2026",
+      "timestamp": "2026-09-04T10:32:15Z"
+    }
+  ],
+  "rewards": [
+    {
+      "id": "rew_seed_01",
+      "developerId": "dev_alex_india",
+      "amount": 4.9,
+      "currency": "INR",
+      "source": "Example AI — AI Engineering Internship",
+      "campaignId": "camp_ai_internship",
+      "impressionId": "imp_seed_01",
+      "status": "settled",
+      "timestamp": "2026-09-04T10:32:12Z"
+    },
+    {
+      "id": "rew_seed_02",
+      "developerId": "dev_alex_india",
+      "amount": 3.5,
+      "currency": "INR",
+      "source": "CloudX — Ship faster with CloudX",
+      "campaignId": "camp_cloudx_credits",
+      "impressionId": "imp_seed_02",
+      "status": "settled",
+      "timestamp": "2026-09-04T10:26:10Z"
+    },
+    {
+      "id": "rew_1788520797862_gzwu",
+      "developerId": "dev_alex_india",
+      "amount": 0.06,
+      "currency": "USD",
+      "source": "Example AI — AI Engineering Internship",
+      "campaignId": "camp_ai_internship",
+      "impressionId": "imp_1788520788217_rbtt0",
+      "status": "settled",
+      "timestamp": "2026-09-04T11:19:57.862Z"
+    },
+    {
+      "id": "rew_1788522107527_b1mh",
+      "developerId": "dev_alex_india",
+      "amount": 0.06,
+      "currency": "USD",
+      "source": "Example AI — AI Engineering Internship",
+      "campaignId": "camp_ai_internship",
+      "impressionId": "imp_1788522097570_8u8zh",
+      "status": "settled",
+      "timestamp": "2026-09-04T11:41:47.527Z"
+    },
+    {
+      "id": "rew_1788522208558_q714",
+      "developerId": "dev_alex_india",
+      "amount": 0.06,
+      "currency": "USD",
+      "source": "Example AI — AI Engineering Internship",
+      "campaignId": "camp_ai_internship",
+      "impressionId": "imp_1788522200574_ysg76",
+      "status": "settled",
+      "timestamp": "2026-09-04T11:43:28.558Z"
+    },
+    {
+      "id": "rew_1788522335787_kts6",
+      "developerId": "dev_alex_india",
+      "amount": 0.06,
+      "currency": "USD",
+      "source": "Example AI — AI Engineering Internship",
+      "campaignId": "camp_ai_internship",
+      "impressionId": "imp_1788522327793_8lvg8",
+      "status": "settled",
+      "timestamp": "2026-09-04T11:45:35.787Z"
+    }
+  ],
+  "wallets": {
+    "dev_alex_india": {
+      "developerId": "dev_alex_india",
+      "balances": {
+        "INR": 8.4,
+        "USD": 0.18,
+        "AI_CREDITS": 16,
+        "CLOUD_CREDITS": 12,
+        "API_CREDITS": 12
+      },
+      "totalEarned": {
+        "INR": 8.4,
+        "USD": 0.34,
+        "AI_CREDITS": 16,
+        "CLOUD_CREDITS": 12,
+        "API_CREDITS": 12
+      },
+      "updatedAt": "2026-09-04T11:45:35.788Z"
+    },
+    "dev_alex_chen": {
+      "developerId": "dev_alex_chen",
+      "balances": {
+        "INR": 0,
+        "USD": 24.5,
+        "AI_CREDITS": 50,
+        "CLOUD_CREDITS": 36,
+        "API_CREDITS": 36
+      },
+      "totalEarned": {
+        "INR": 0,
+        "USD": 24.5,
+        "AI_CREDITS": 50,
+        "CLOUD_CREDITS": 36,
+        "API_CREDITS": 36
+      },
+      "updatedAt": "2026-09-04T09:00:00Z"
+    },
+    "dev_1788517986349": {
+      "developerId": "dev_1788517986349",
+      "balances": {
+        "INR": 0,
+        "USD": 0,
+        "AI_CREDITS": 0,
+        "CLOUD_CREDITS": 0,
+        "API_CREDITS": 0
+      },
+      "totalEarned": {
+        "INR": 0,
+        "USD": 0,
+        "AI_CREDITS": 0,
+        "CLOUD_CREDITS": 0,
+        "API_CREDITS": 0
+      },
+      "updatedAt": "2026-09-04T10:33:06.350Z"
+    },
+    "dev_1788518451590": {
+      "developerId": "dev_1788518451590",
+      "balances": {
+        "INR": 0,
+        "USD": 0,
+        "AI_CREDITS": 0,
+        "CLOUD_CREDITS": 0,
+        "API_CREDITS": 0
+      },
+      "totalEarned": {
+        "INR": 0,
+        "USD": 0,
+        "AI_CREDITS": 0,
+        "CLOUD_CREDITS": 0,
+        "API_CREDITS": 0
+      },
+      "updatedAt": "2026-09-04T10:40:51.591Z"
+    }
+  },
+  "fraudFlags": []
+}
