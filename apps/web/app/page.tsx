@@ -20,16 +20,42 @@ import {
   Download,
 } from 'lucide-react';
 import { AgentType } from '@rebate/shared';
+import { useAuth } from '@/lib/auth/auth-context';
 
 const AGENTS = [
-  { id: 'antigravity', name: 'Antigravity', cmd: 'antigravity refactor auth.py --with-tests', status: 'Generating abstract syntax tree...' },
-  { id: 'claude_code', name: 'Claude Code', cmd: 'claude "implement distributed rate limiter"', status: 'Thinking through token bucket architecture...' },
-  { id: 'codex', name: 'Codex CLI', cmd: 'codex optimize database_indexes.sql', status: 'Analyzing execution plan and table locks...' },
-  { id: 'opencode', name: 'OpenCode', cmd: 'opencode run test-suite --e2e', status: 'Running 42 end-to-end integration tests...' },
+  {
+    id: 'antigravity',
+    name: 'Google Antigravity CLI',
+    badge: 'Native Verified ⭐',
+    cmd: 'agy refactor auth_middleware.py --verify-tokens',
+    status: 'Analyzing abstract syntax tree and evaluating candidate opportunities...',
+  },
+  {
+    id: 'claude_code',
+    name: 'Claude Code',
+    badge: 'Developer Preview',
+    cmd: 'claude "implement distributed rate limiter"',
+    status: 'Thinking through token bucket architecture...',
+  },
+  {
+    id: 'codex',
+    name: 'Codex CLI',
+    badge: 'Developer Preview',
+    cmd: 'codex optimize database_indexes.sql',
+    status: 'Analyzing execution plan and table locks...',
+  },
+  {
+    id: 'opencode',
+    name: 'OpenCode',
+    badge: 'Developer Preview',
+    cmd: 'opencode run test-suite --e2e',
+    status: 'Running 42 end-to-end integration tests...',
+  },
 ];
 
 export default function MarketingPage() {
   const [activeAgent, setActiveAgent] = useState(AGENTS[0]);
+  const { demoLogin } = useAuth();
 
   return (
     <div className="min-h-screen bg-[#09090b] text-zinc-100 selection:bg-emerald-500/20 selection:text-emerald-300">
@@ -106,6 +132,140 @@ export default function MarketingPage() {
         </div>
       </section>
 
+      {/* Hackathon Evaluator & Judge Quick-Start Section (Self-Serve) */}
+      <section className="border-b border-zinc-800 bg-gradient-to-b from-zinc-950 via-zinc-900/40 to-zinc-950 py-12">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6">
+          <div className="rounded-2xl border border-emerald-500/30 bg-zinc-950/90 p-6 sm:p-8 shadow-2xl backdrop-blur-sm">
+            <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-zinc-800/80 pb-6 mb-6">
+              <div>
+                <div className="flex items-center gap-2 mb-2">
+                  <span className="flex h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
+                  <span className="text-xs font-mono font-bold text-emerald-400 uppercase tracking-wider">
+                    Hackathon Judge & Evaluator Guide
+                  </span>
+                  <span className="rounded bg-emerald-500/15 px-2 py-0.5 text-[10px] font-mono text-emerald-300 border border-emerald-500/30">
+                    100% Self-Serve
+                  </span>
+                </div>
+                <h2 className="text-xl sm:text-2xl font-bold text-white tracking-tight">
+                  How to evaluate Rebate without local setup
+                </h2>
+                <p className="mt-1 text-xs sm:text-sm text-zinc-400 max-w-2xl">
+                  Judges get only this link! Everything is self-contained. Choose from three interactive paths below to test the full lifecycle, from terminal auction math to live wallet payouts.
+                </p>
+              </div>
+
+              <div className="flex items-center gap-2 shrink-0">
+                <Link
+                  href="/demo"
+                  className="flex items-center gap-2 rounded-lg bg-emerald-500 px-4 py-2 text-xs font-bold text-black hover:bg-emerald-400 transition shadow-md shadow-emerald-500/20"
+                >
+                  <Play className="h-3.5 w-3.5 fill-current" />
+                  <span>Launch 60s Demo Simulator</span>
+                </Link>
+              </div>
+            </div>
+
+            {/* 3 Step Evaluation Paths */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              {/* Path 1: Simulator */}
+              <div className="rounded-xl border border-zinc-800 bg-zinc-900/50 p-5 flex flex-col justify-between">
+                <div>
+                  <div className="flex items-center justify-between text-[11px] font-mono text-emerald-400 mb-2">
+                    <span>PATH 01 • SIMULATOR</span>
+                    <span className="text-[10px] text-zinc-500">60 Seconds</span>
+                  </div>
+                  <h3 className="text-sm font-bold text-white mb-2">
+                    Interactive 60s Simulator
+                  </h3>
+                  <p className="text-xs text-zinc-400 leading-relaxed">
+                    Auto-play or step through Developer Profiling → Antigravity Wait-State Detection → Live 2nd-Price Auction → Terminal OSC 8 Click & Hotkey 'o' → Instant 70/30 Ledger Payout.
+                  </p>
+                </div>
+                <div className="mt-5 pt-3 border-t border-zinc-800/80">
+                  <Link
+                    href="/demo"
+                    className="inline-flex items-center gap-1.5 text-xs font-semibold text-emerald-400 hover:text-emerald-300"
+                  >
+                    <span>Run Simulator (/demo)</span>
+                    <ArrowRight className="h-3 w-3" />
+                  </Link>
+                </div>
+              </div>
+
+              {/* Path 2: Developer Dashboard */}
+              <div className="rounded-xl border border-zinc-800 bg-zinc-900/50 p-5 flex flex-col justify-between">
+                <div>
+                  <div className="flex items-center justify-between text-[11px] font-mono text-cyan-400 mb-2">
+                    <span>PATH 02 • DEVELOPER</span>
+                    <span className="text-[10px] text-zinc-500">1-Click Login</span>
+                  </div>
+                  <h3 className="text-sm font-bold text-white mb-2">
+                    Priya Sharma's Dev Center
+                  </h3>
+                  <p className="text-xs text-zinc-400 leading-relaxed">
+                    Inspect voluntary developer profiling, zero code inspection policy, live transaction ledger with INR UPI payouts, and cash withdrawal requests.
+                  </p>
+                </div>
+                <div className="mt-5 pt-3 border-t border-zinc-800/80 flex items-center justify-between">
+                  <button
+                    onClick={() => demoLogin('developer')}
+                    className="inline-flex items-center gap-1.5 rounded bg-zinc-800 hover:bg-zinc-700 px-3 py-1.5 text-xs font-semibold text-white transition"
+                  >
+                    <span>1-Click Dev Login</span>
+                    <ArrowRight className="h-3 w-3" />
+                  </button>
+                  <span className="text-[10px] font-mono text-emerald-400 font-semibold">₹28.00 Balance</span>
+                </div>
+              </div>
+
+              {/* Path 3: Advertiser Portal */}
+              <div className="rounded-xl border border-zinc-800 bg-zinc-900/50 p-5 flex flex-col justify-between">
+                <div>
+                  <div className="flex items-center justify-between text-[11px] font-mono text-purple-400 mb-2">
+                    <span>PATH 03 • ADVERTISER</span>
+                    <span className="text-[10px] text-zinc-500">1-Click Login</span>
+                  </div>
+                  <h3 className="text-sm font-bold text-white mb-2">
+                    Elena Rostova's Campaign Hub
+                  </h3>
+                  <p className="text-xs text-zinc-400 leading-relaxed">
+                    Build developer campaigns, configure negative and positive targeting rules (skills, geography, roles), top up demo budget, and view CPM auction analytics.
+                  </p>
+                </div>
+                <div className="mt-5 pt-3 border-t border-zinc-800/80 flex items-center justify-between">
+                  <button
+                    onClick={() => demoLogin('advertiser')}
+                    className="inline-flex items-center gap-1.5 rounded bg-zinc-800 hover:bg-zinc-700 px-3 py-1.5 text-xs font-semibold text-white transition"
+                  >
+                    <span>1-Click Adv Login</span>
+                    <ArrowRight className="h-3 w-3" />
+                  </button>
+                  <span className="text-[10px] font-mono text-zinc-400">Example AI</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Agent Compatibility & Transparency Bar */}
+            <div className="mt-6 rounded-lg border border-zinc-800 bg-zinc-950 p-4 text-xs flex flex-col sm:flex-row sm:items-center justify-between gap-3 font-mono">
+              <div className="flex flex-wrap items-center gap-2 text-zinc-300">
+                <span className="text-emerald-400 font-bold">● Native Verified Support:</span>
+                <span className="text-white">Google Antigravity CLI (`agy`)</span>
+                <span className="text-zinc-600 hidden sm:inline">•</span>
+                <span className="text-zinc-500">Developer Preview: Claude Code, OpenAI Codex, OpenCode</span>
+              </div>
+              <Link
+                href="/download"
+                className="text-emerald-400 hover:underline flex items-center gap-1 shrink-0"
+              >
+                <span>CLI Setup & Architecture</span>
+                <ArrowRight className="h-3 w-3" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Interactive Terminal Demonstration Section */}
       <section className="py-16 sm:py-24 border-b border-zinc-900 bg-zinc-950/40">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
@@ -121,18 +281,27 @@ export default function MarketingPage() {
             </div>
 
             {/* Agent Selector Tabs */}
-            <div className="flex items-center gap-1.5 rounded-lg border border-zinc-800 bg-zinc-950 p-1">
+            <div className="flex flex-wrap items-center gap-1.5 rounded-lg border border-zinc-800 bg-zinc-950 p-1">
               {AGENTS.map((agent) => (
                 <button
                   key={agent.id}
                   onClick={() => setActiveAgent(agent)}
-                  className={`rounded-md px-2.5 py-1 text-xs font-mono transition ${
+                  className={`flex items-center gap-1.5 rounded-md px-2.5 py-1 text-xs font-mono transition ${
                     activeAgent.id === agent.id
                       ? 'bg-zinc-800 text-white font-semibold'
                       : 'text-zinc-400 hover:text-zinc-200'
                   }`}
                 >
-                  {agent.name}
+                  <span>{agent.name}</span>
+                  <span
+                    className={`text-[9px] px-1.5 py-0.5 rounded font-mono ${
+                      agent.id === 'antigravity'
+                        ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 font-bold'
+                        : 'bg-zinc-900 text-zinc-500 border border-zinc-800'
+                    }`}
+                  >
+                    {agent.badge}
+                  </span>
                 </button>
               ))}
             </div>

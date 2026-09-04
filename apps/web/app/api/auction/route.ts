@@ -99,7 +99,9 @@ export async function POST(req: NextRequest) {
         relevanceScore: auctionResult.winner.relevanceScore,
         totalScore: auctionResult.winner.totalScore,
         allScores: auctionResult.allScores,
+        evaluations: auctionResult.evaluations || [],
       },
+      evaluations: auctionResult.evaluations || [],
     });
   } catch (error) {
     console.error('[API /auction error]:', error);

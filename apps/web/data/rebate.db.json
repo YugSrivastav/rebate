@@ -1493,6 +1493,15 @@
       "startedAt": "2026-09-04T17:23:37.277Z",
       "lastHeartbeat": "2026-09-04T17:23:37.277Z",
       "eventSequence": 1
+    },
+    {
+      "sessionId": "sess_eval_test",
+      "developerId": "dev_alex_india",
+      "agentType": "antigravity",
+      "status": "waiting",
+      "startedAt": "2026-09-04T17:43:08.639Z",
+      "lastHeartbeat": "2026-09-04T17:43:08.639Z",
+      "eventSequence": 1
     }
   ],
   "impressions": [
@@ -1932,6 +1941,21 @@
       "developerReward": 0,
       "currency": "USD",
       "createdAt": "2026-09-04T17:23:37.279Z"
+    },
+    {
+      "impressionId": "imp_1788543788641_0stjc",
+      "campaignId": "camp_ai_internship",
+      "developerId": "dev_alex_india",
+      "sessionId": "sess_eval_test",
+      "agentType": "antigravity",
+      "startedAt": "2026-09-04T17:43:08.641Z",
+      "durationSeconds": 0,
+      "status": "pending",
+      "advertiserCost": 0,
+      "platformShare": 0,
+      "developerReward": 0,
+      "currency": "USD",
+      "createdAt": "2026-09-04T17:43:08.641Z"
     }
   ],
   "clicks": [

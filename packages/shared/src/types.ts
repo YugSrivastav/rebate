@@ -246,6 +246,18 @@ export interface AuctionCandidate {
   totalScore: number;
 }
 
+export interface AuctionEvaluationItem {
+  campaignId: string;
+  companyName: string;
+  title: string;
+  bid: number;
+  qualified: boolean;
+  relevance: number;
+  quality: number;
+  totalScore: number;
+  rejectionReason?: string;
+}
+
 export interface AuctionResult {
   winner: AuctionCandidate | null;
   allScores: Array<{
@@ -256,6 +268,7 @@ export interface AuctionResult {
     quality: number;
     totalScore: number;
   }>;
+  evaluations?: AuctionEvaluationItem[];
 }
 
 export interface OpportunityRequest {
