@@ -246,21 +246,30 @@ export default function MarketingPage() {
               </div>
             </div>
 
-            {/* Agent Compatibility & Transparency Bar */}
-            <div className="mt-6 rounded-lg border border-zinc-800 bg-zinc-950 p-4 text-xs flex flex-col sm:flex-row sm:items-center justify-between gap-3 font-mono">
-              <div className="flex flex-wrap items-center gap-2 text-zinc-300">
-                <span className="text-emerald-400 font-bold">● Native Verified Support:</span>
-                <span className="text-white">Google Antigravity CLI (`agy`)</span>
-                <span className="text-zinc-600 hidden sm:inline">•</span>
-                <span className="text-zinc-500">Developer Preview: Claude Code, OpenAI Codex, OpenCode</span>
+            {/* Hackathon Prototype Scope & Transparency Notice */}
+            <div className="mt-6 rounded-xl border border-emerald-500/30 bg-emerald-950/20 p-4 text-xs font-mono">
+              <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-4">
+                <div className="space-y-1.5">
+                  <div className="flex items-center gap-2 text-emerald-400 font-bold text-xs uppercase tracking-wider">
+                    <span className="flex h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
+                    <span>Hackathon Prototype Scope:</span>
+                    <span className="text-white">Google Antigravity CLI (`agy`) Only</span>
+                  </div>
+                  <p className="text-zinc-300 leading-relaxed text-[11px]">
+                    During this hackathon sprint, we focused on delivering a <strong>100% complete, fully working, end-to-end native implementation specifically for Google Antigravity CLI (`agy`)</strong> — including PTY interception, transient spinner wait-state detection, ANSI OSC 8 links, hotkey 'o' browser launching, and automated ledger settlement.
+                  </p>
+                  <p className="text-zinc-400 text-[10px]">
+                    Adapters for Claude Code, OpenAI Codex, and OpenCode represent architectural specifications on our post-hackathon roadmap.
+                  </p>
+                </div>
+                <Link
+                  href="/download"
+                  className="inline-flex items-center gap-1.5 rounded-lg border border-emerald-500/40 bg-emerald-500/10 px-3 py-1.5 text-emerald-300 hover:bg-emerald-500/20 transition shrink-0 text-xs font-semibold"
+                >
+                  <span>CLI Setup & Architecture</span>
+                  <ArrowRight className="h-3 w-3" />
+                </Link>
               </div>
-              <Link
-                href="/download"
-                className="text-emerald-400 hover:underline flex items-center gap-1 shrink-0"
-              >
-                <span>CLI Setup & Architecture</span>
-                <ArrowRight className="h-3 w-3" />
-              </Link>
             </div>
           </div>
         </div>

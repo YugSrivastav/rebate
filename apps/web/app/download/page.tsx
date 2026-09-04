@@ -124,8 +124,12 @@ export default function DownloadPage() {
                     <span>Rebate Local Daemon & Terminal Client</span>
                   </h2>
                   <p className="mt-1 text-xs text-zinc-400">
-                    The standalone background daemon that automatically detects when terminal AI agents (Claude Code, Antigravity, Codex, OpenCode) enter wait states.
+                    The standalone background daemon that automatically detects when terminal AI agents enter wait states.
                   </p>
+                  <div className="mt-2 inline-flex items-center gap-2 rounded-md bg-emerald-500/10 border border-emerald-500/30 px-2.5 py-1 text-[11px] font-mono text-emerald-300">
+                    <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                    <span>Hackathon Prototype Note: Fully working version is built specifically for Google Antigravity CLI (`agy`). Other agents are in developer preview.</span>
+                  </div>
                 </div>
 
                 {/* OS Selector */}

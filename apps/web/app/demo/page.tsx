@@ -229,6 +229,10 @@ export default function DemoSimulatorPage() {
             <p className="mt-0.5 text-xs text-zinc-300">
               Test the entire Rebate value engine right in your browser. Toggle between <strong>Auto-Play</strong> or <strong>Step-by-Step</strong> to inspect auction math, terminal mechanics, and wallet settlement.
             </p>
+            <div className="mt-2 inline-flex items-center gap-2 rounded-md bg-emerald-500/10 border border-emerald-500/25 px-2 py-0.5 text-[10px] font-mono text-emerald-300">
+              <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
+              <span>Hackathon Prototype Note: End-to-end working implementation is built specifically for Google Antigravity CLI (`agy`).</span>
+            </div>
           </div>
         </div>
 
