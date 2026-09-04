@@ -2,6 +2,12 @@
 
 > **"While your AI works, Rebate works for you."**
 
+[![Vercel Deployment](https://img.shields.io/badge/Vercel-Live%20Site-black?style=for-the-badge&logo=vercel)](https://rebate-lyart.vercel.app)
+[![Live Demo](https://img.shields.io/badge/Demo-60s%20Interactive%20Simulator-blue?style=for-the-badge)](https://rebate-lyart.vercel.app/demo)
+
+🌐 **Live Production Site**: [https://rebate-lyart.vercel.app](https://rebate-lyart.vercel.app)  
+🎮 **Interactive 60s Simulator**: [https://rebate-lyart.vercel.app/demo](https://rebate-lyart.vercel.app/demo)
+
 ---
 
 ## ⚡ What is Rebate?
