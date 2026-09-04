@@ -1397,8 +1397,8 @@
       "developerId": "dev_alex_india",
       "agentType": "antigravity",
       "status": "active",
-      "startedAt": "2026-09-04T10:43:09.404Z",
-      "lastHeartbeat": "2026-09-04T11:43:09.405Z",
+      "startedAt": "2026-09-04T16:50:08.164Z",
+      "lastHeartbeat": "2026-09-04T17:50:08.165Z",
       "eventSequence": 4
     },
     {
@@ -1406,8 +1406,8 @@
       "developerId": "dev_alex_india",
       "agentType": "claude_code",
       "status": "idle",
-      "startedAt": "2026-09-04T09:43:09.405Z",
-      "lastHeartbeat": "2026-09-04T11:13:09.405Z",
+      "startedAt": "2026-09-04T15:50:08.165Z",
+      "lastHeartbeat": "2026-09-04T17:20:08.165Z",
       "eventSequence": 2
     },
     {
@@ -1415,8 +1415,8 @@
       "developerId": "dev_alex_india",
       "agentType": "antigravity",
       "status": "waiting",
-      "startedAt": "2026-09-04T11:43:09.411Z",
-      "lastHeartbeat": "2026-09-04T11:43:09.411Z",
+      "startedAt": "2026-09-04T17:50:08.176Z",
+      "lastHeartbeat": "2026-09-04T17:50:08.176Z",
       "eventSequence": 1
     }
   ],
@@ -1459,15 +1459,15 @@
       "developerId": "dev_cooldown_user",
       "sessionId": "sess_test_fraud_01",
       "agentType": "antigravity",
-      "startedAt": "2026-09-04T11:42:54.427Z",
-      "endedAt": "2026-09-04T11:43:06.427Z",
+      "startedAt": "2026-09-04T17:49:53.232Z",
+      "endedAt": "2026-09-04T17:50:05.232Z",
       "durationSeconds": 12,
       "status": "verified",
       "advertiserCost": 7,
       "platformShare": 2.1,
       "developerReward": 4.9,
       "currency": "INR",
-      "createdAt": "2026-09-04T11:43:09.427Z"
+      "createdAt": "2026-09-04T17:50:08.232Z"
     }
   ],
   "clicks": [
@@ -1512,7 +1512,7 @@
       "currency": "INR",
       "source": "Impression verified: Test",
       "status": "settled",
-      "timestamp": "2026-09-04T11:43:09.422Z"
+      "timestamp": "2026-09-04T17:50:08.208Z"
     },
     {
       "id": "rew_cap_2",
@@ -1523,7 +1523,7 @@
       "currency": "INR",
       "source": "Impression verified: Test",
       "status": "settled",
-      "timestamp": "2026-09-04T11:43:09.423Z"
+      "timestamp": "2026-09-04T17:50:08.214Z"
     }
   ],
   "wallets": {
@@ -1566,31 +1566,31 @@
   },
   "fraudFlags": [
     {
-      "id": "flag_1788522189419",
+      "id": "flag_1788544208196",
       "developerId": "dev_alex_india",
       "sessionId": "sess_completely_fake",
       "flagType": "invalid_session",
       "severity": "medium",
       "details": "Impression submitted for non-existent session: sess_completely_fake",
-      "timestamp": "2026-09-04T11:43:09.419Z"
+      "timestamp": "2026-09-04T17:50:08.196Z"
     },
     {
-      "id": "flag_1788522189424",
+      "id": "flag_1788544208220",
       "developerId": "dev_capped_user",
       "sessionId": "sess_test_fraud_01",
       "flagType": "hourly_cap_exceeded",
       "severity": "low",
       "details": "Hourly earning limit of 150 reached (160.00).",
-      "timestamp": "2026-09-04T11:43:09.424Z"
+      "timestamp": "2026-09-04T17:50:08.220Z"
     },
     {
-      "id": "flag_1788522189428",
+      "id": "flag_1788544208238",
       "developerId": "dev_cooldown_user",
       "sessionId": "sess_test_fraud_01",
       "flagType": "cooldown_violation",
       "severity": "medium",
       "details": "Impression submitted within cooldown window (3.0s < 15s)",
-      "timestamp": "2026-09-04T11:43:09.428Z"
+      "timestamp": "2026-09-04T17:50:08.238Z"
     }
   ]
 }

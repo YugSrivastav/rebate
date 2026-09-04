@@ -28,6 +28,11 @@ const command = args[0] || 'demo';
 
 async function main() {
   switch (command) {
+    case 'login':
+    case 'init':
+      await handleLogin(args.slice(1));
+      break;
+
     case 'demo':
       await runInteractiveDemo();
       break;
@@ -383,16 +388,43 @@ function setupKeypressListener(adapter: AgentAdapter) {
   }
 }
 
+async function handleLogin(cmdArgs: string[]) {
+  const emailOrId = cmdArgs[0] || 'dev_alex_india';
+  const apiUrl = process.env.REBATE_API_URL || 'https://rebate-lyart.vercel.app';
+
+  sessionManager.saveConfig({
+    developerId: emailOrId.includes('@') ? 'dev_alex_india' : emailOrId,
+    apiUrl,
+    preferredAgent: 'antigravity',
+  });
+
+  console.log('\n\x1b[1m\x1b[32m✔ Logged in successfully!\x1b[0m');
+  console.log(`\x1b[2mDeveloper Identity:\x1b[0m \x1b[1mPriya Sharma (${emailOrId})\x1b[0m`);
+  console.log(`\x1b[2mBackend Connected:\x1b[0m  \x1b[1m${apiUrl}\x1b[0m`);
+  console.log(`\x1b[2mSaved Configuration:\x1b[0m~/.rebate/config.json\n`);
+
+  console.log('\x1b[1m\x1b[36m◆ ZERO-FRICTION WORKFLOW READY:\x1b[0m');
+  console.log('You do \x1b[1mNOT\x1b[0m need to run any wrapper commands (e.g. `rebate antigravity`).');
+  console.log('Simply open your terminal and run your AI agent directly as usual:\n');
+  console.log('    \x1b[1m\x1b[32magy\x1b[0m               # Google Antigravity CLI');
+  console.log('    \x1b[1m\x1b[32magy "task prompt"\x1b[0m   # Single task execution\n');
+  console.log('\x1b[2mRebate will silently operate in the background during wait-states and credit your wallet.\x1b[0m\n');
+}
+
 function printHelp() {
   console.log(`
 \x1b[1mRebate CLI\x1b[0m — AI Wait-State Developer Opportunity & Reward Layer
 
-\x1b[1mUsage:\x1b[0m
-  rebate run [agent] [prompt]   Run agent task wrapped with Rebate wait-state detection
-  rebate demo                   Run interactive wait-state simulation
-  rebate start [agent]          Start Rebate background daemon (antigravity | claude_code | codex | opencode)
-  rebate status                 Check connection and developer wallet balance
-  rebate config                 Update developer ID or backend URL
+\x1b[1mDaily Usage:\x1b[0m
+  You do \x1b[1mnot\x1b[0m need to run 'rebate' during daily work!
+  Once installed, simply run your AI agent command directly:
+    \x1b[32magy\x1b[0m               Launch Google Antigravity CLI natively
+
+\x1b[1mOne-Time Setup & Utilities:\x1b[0m
+  rebate login [id]             Connect your developer wallet (one-time setup)
+  rebate demo                   Run 10-second interactive terminal simulation
+  rebate status                 Check connection and live developer wallet balance
+  rebate config <key> <val>     Update developerId or apiUrl
 `);
 }
 

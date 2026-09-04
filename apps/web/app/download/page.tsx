@@ -244,35 +244,35 @@ export default function DownloadPage() {
                 </h3>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                   <div className="rounded-lg border border-zinc-800/60 bg-zinc-900/30 p-4">
-                    <div className="text-xs font-mono text-emerald-400 mb-1">STEP 1</div>
-                    <div className="text-xs font-semibold text-white mb-2">Link Your Developer ID</div>
+                    <div className="text-xs font-mono text-emerald-400 mb-1">STEP 1 • ONE-TIME SETUP</div>
+                    <div className="text-xs font-semibold text-white mb-2">Connect Your Developer ID</div>
                     <div className="rounded bg-zinc-950 px-2.5 py-1.5 font-mono text-[11px] text-zinc-400">
                       rebate login
                     </div>
                     <p className="mt-2 text-[11px] text-zinc-500">
-                      Links the local client to your Rebate wallet so earnings credit directly to you.
+                      Links your local environment to your Rebate wallet and hooks into your agent. Run once; never touch again.
                     </p>
                   </div>
 
                   <div className="rounded-lg border border-zinc-800/60 bg-zinc-900/30 p-4">
-                    <div className="text-xs font-mono text-emerald-400 mb-1">STEP 2</div>
-                    <div className="text-xs font-semibold text-white mb-2">Launch with Your Agent</div>
-                    <div className="rounded bg-zinc-950 px-2.5 py-1.5 font-mono text-[11px] text-zinc-400">
-                      rebate run antigravity
+                    <div className="text-xs font-mono text-emerald-400 mb-1">STEP 2 • EVERYDAY USAGE</div>
+                    <div className="text-xs font-semibold text-white mb-2">Run Your Agent As Usual</div>
+                    <div className="rounded bg-zinc-950 px-2.5 py-1.5 font-mono text-[11px] text-emerald-400 font-bold">
+                      agy
                     </div>
                     <p className="mt-2 text-[11px] text-zinc-500">
-                      Or wrap Claude Code, Codex, or OpenCode. The agent runs exactly as usual.
+                      Zero wrapper commands. No <code className="text-zinc-400">rebate agy</code> needed. Just open your terminal and work as normal.
                     </p>
                   </div>
 
                   <div className="rounded-lg border border-zinc-800/60 bg-zinc-900/30 p-4">
-                    <div className="text-xs font-mono text-emerald-400 mb-1">STEP 3</div>
+                    <div className="text-xs font-mono text-emerald-400 mb-1">STEP 3 • PASSIVE REWARDS</div>
                     <div className="text-xs font-semibold text-white mb-2">Earn 70% Value Share</div>
                     <div className="rounded bg-zinc-950 px-2.5 py-1.5 font-mono text-[11px] text-zinc-400">
                       [press o to view]
                     </div>
                     <p className="mt-2 text-[11px] text-zinc-500">
-                      Non-intrusive 1-line wait states. Press hotkey 'o' to inspect matched opportunities.
+                      Opportunities surface only during AI wait-states. Press 'o' to inspect; rewards credit silently to your wallet.
                     </p>
                   </div>
                 </div>

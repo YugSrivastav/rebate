@@ -20,7 +20,7 @@ const CONFIG_FILE = path.join(CONFIG_DIR, 'config.json');
 
 const DEFAULT_CONFIG: RebateConfig = {
   developerId: 'dev_alex_india',
-  apiUrl: 'http://localhost:3000',
+  apiUrl: 'https://rebate-lyart.vercel.app',
   preferredAgent: 'antigravity',
   minimumViewSeconds: 8,
 };

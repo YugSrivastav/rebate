@@ -22,8 +22,17 @@ except ImportError as e:
     print(f"[Rebate] Error: Required native terminal module missing: {e}", file=sys.stderr)
     sys.exit(1)
 
-API_URL = os.environ.get("REBATE_API_URL", "http://localhost:3000")
-DEVELOPER_ID = os.environ.get("REBATE_DEVELOPER_ID", "dev_alex_india")
+CONFIG_PATH = os.path.expanduser("~/.rebate/config.json")
+_local_cfg = {}
+if os.path.exists(CONFIG_PATH):
+    try:
+        with open(CONFIG_PATH, "r", encoding="utf-8") as f:
+            _local_cfg = json.load(f)
+    except Exception:
+        pass
+
+API_URL = os.environ.get("REBATE_API_URL") or _local_cfg.get("apiUrl") or "https://rebate-lyart.vercel.app"
+DEVELOPER_ID = os.environ.get("REBATE_DEVELOPER_ID") or _local_cfg.get("developerId") or "dev_alex_india"
 REAL_AGY_PATH = os.environ.get("REBATE_REAL_AGY", r"C:\Users\yugsr\AppData\Local\agy\bin\agy-original.exe")
 
 if not os.path.exists(REAL_AGY_PATH):
